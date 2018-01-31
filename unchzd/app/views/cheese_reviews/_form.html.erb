@@ -1,0 +1,37 @@
+<%= form_with(model: cheese_review, local: true) do |form| %>
+  <% if cheese_review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cheese_review.errors.count, "error") %> prohibited this cheese_review from being saved:</h2>
+
+      <ul>
+      <% cheese_review.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cheese_id %>
+    <%= form.number_field :cheese_id, id: :cheese_review_cheese_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id, id: :cheese_review_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rating %>
+    <%= form.number_field :rating, id: :cheese_review_rating %>
+  </div>
+
+  <div class="field">
+    <%= form.label :review %>
+    <%= form.text_area :review, id: :cheese_review_review %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

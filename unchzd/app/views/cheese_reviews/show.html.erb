@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cheese:</strong>
+  <%= @cheese_review.cheese_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cheese_review.user_id %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @cheese_review.rating %>
+</p>
+
+<p>
+  <strong>Review:</strong>
+  <%= @cheese_review.review %>
+</p>
+
+<%= link_to 'Edit', edit_cheese_review_path(@cheese_review) %> |
+<%= link_to 'Back', cheese_reviews_path %>
