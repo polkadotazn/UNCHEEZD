@@ -1,4 +1,4 @@
-class CheeseReviewsController < ApplicationController
+class Api::CheeseReviewsController < ApplicationController
   before_action :set_cheese_review, only: [:show, :edit, :update, :destroy]
 
   # GET /cheese_reviews

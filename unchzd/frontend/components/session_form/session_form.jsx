@@ -6,6 +6,7 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
       username: '',
+      email: '',
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -37,17 +38,6 @@ class SessionForm extends React.Component {
     }
   }
 
-  renderErrors() {
-    return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
-  }
 
   render() {
     return (
@@ -56,13 +46,21 @@ class SessionForm extends React.Component {
           Welcome to UNCHEEZD!
           <br/>
           Please {this.props.formType} or {this.navLink()}
-          {this.renderErrors()}
+
           <div className="login-form">
             <br/>
             <label>Username:
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
+                className="login-input"
+              />
+            </label>
+            <br/>
+            <label>Email:
+              <input type="text"
+                value={this.state.email}
+                onChange={this.update('email')}
                 className="login-input"
               />
             </label>

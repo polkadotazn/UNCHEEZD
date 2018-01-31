@@ -1,4 +1,4 @@
-class CheesesController < ApplicationController
+class Api::CheesesController < ApplicationController
   before_action :set_cheese, only: [:show, :edit, :update, :destroy]
 
   # GET /cheeses

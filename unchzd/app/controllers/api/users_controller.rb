@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Api::UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -24,14 +24,14 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+    p "hey"
     @user = User.new(user_params)
-      if @user.save
-        login(@user)
-        render 'api/home'
-      else
-        render json: @user.errors.full_messages, status: 422
-      end
+    if @user.save
+      login(@user)
+    else
+      render json: @user.errors.full_messages, status: 422
     end
+
   end
 
   # PATCH/PUT /users/1
@@ -66,6 +66,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:username, :email, :img_url)
+      params.require(:user).permit(:username, :password, :email, :img_url)
     end
 end
