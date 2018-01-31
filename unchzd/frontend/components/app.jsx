@@ -14,10 +14,10 @@ import Greeting from './navbar/logout_container';
 const App = () => (
   <div>
     <header>
+      <Greeting/>
       <Link to="/" >
         <h1>UNCHEEZD</h1>
       </Link>
-      <Greeting/>
     </header>
     <Switch>
       <AuthRoute exact path="/login" component={SessionFormContainer}/>
