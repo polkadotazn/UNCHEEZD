@@ -22,27 +22,30 @@
   h6 {
     text-align: center;
     margin: 0;
-    font-size: 22px;
+    font-size: 27px;
     margin-bottom: 20px;
     font-family: helvetica;
+    color: #FFC300;
   }
   #navlink {
     text-align: center;
     margin: 0;
     font-family: 'Heebo', sans-serif;
+    color: #A9A9A9;
   }
   a:link {
-    color: black;
+    color: #34495E;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 500;
   }
   a:visited {
-    color: black;
+    color: #34495E;
     text-decoration: none;
     font-weight: 500;
   }
   a:hover {
     text-decoration: underline;
+    font-weight: 600;
   }
   .session-submit {
     margin: 0 auto;
@@ -86,7 +89,7 @@
   margin: 0 auto;
   width: 250px;
   height: 25px;
-  font-size: 13px;
+  font-size: 14px;
   font-family: helvetica;
   padding-top: 5px;
   margin-bottom: 10px;
