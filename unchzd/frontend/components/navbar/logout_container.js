@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 
 import { logout } from '../../actions/session_actions';
-import Greeting from './logout_button';
+import SessionLog from './logout_button';
 
 const mapStateToProps = ({ session }) => ({
   currentUser: session.currentUser
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Greeting);
+)(SessionLog);

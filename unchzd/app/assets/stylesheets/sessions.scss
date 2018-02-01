@@ -41,6 +41,7 @@ nav {
   justify-content: flex-end;
   align-items: center;
   color: white;
+  background-color: transparent;
 }
 #app {
   display:block;
@@ -51,7 +52,8 @@ nav {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to right, rgba(0,0,0,.8), rgba(0,0,0,0.8)), url(http://i64.tinypic.com/3538hme.jpg);
+  background-image: linear-gradient(to right, rgba(0,0,0,.8), rgba(0,0,0,0.8)),
+    url(http://i64.tinypic.com/3538hme.jpg);
   background-size: cover;
   background-position: center top;
   height: 900px;
@@ -60,7 +62,14 @@ nav {
 }
 
 // linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(../images/beer-bg.jpg);
-
+button {
+  border-style: none;
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+  --webkit-appearance: none;
+  background-color: transparent;
+}
 .session-button {
   height: 20px;
   width: auto;

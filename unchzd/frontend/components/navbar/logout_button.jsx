@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 
 const sessionLinks = () => (
   <nav className="login-signup">
-    <button onClick={() => this.openModal()}><Link to="/login" className="session-button">Sign In</Link></button>
-
+    <Link to="/login" className="session-button">Sign In</Link>
     <Link to="/signup" className="session-button">Create an Account</Link>
   </nav>
 );

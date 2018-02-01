@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, withRouter, Redirect } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.setRedirect = this.setRedirect.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -32,48 +33,81 @@ class SessionForm extends React.Component {
 
   navLink() {
     if (this.props.formType === 'login') {
-      return <Link to="/signup">Sign Up Here</Link>;
+      return <Link to="/signup">sign up here</Link>;
     } else {
-      return <Link to="/login">Log In Here</Link>;
+      return <Link to="/login">log in here</Link>;
+    }
+  }
+
+  setRedirect () {
+     this.setState({
+       redirect: true
+     });
+   }
+
+  renderRedirect () {
+    if (this.state.redirect) {
+      return <Redirect to='/' />;
     }
   }
 
 
   render() {
+    let emailInput;
+    let submitButton = "Sign In";
+    let formType = "log in";
+    if (this.props.formType !== 'login') {
+      emailInput = <input type="text"
+        placeholder="  📧   |   Email Address"
+        value={this.state.email}
+        onChange={this.update('email')}
+        className="login-input"
+        />;
+      submitButton = "Create Account";
+      formType = "sign up";
+    }
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to UNCHEEZD!
-          <br/>
-          Please {this.props.formType} or {this.navLink()}
+          <div id="x">
+            {this.renderRedirect()}
+            <img className="xMark"
+              onClick={this.setRedirect}
+              src="http://i66.tinypic.com/t03s43.jpg"/>
+          </div>
+          <h1>UNCHEEZD</h1>
+          <h6>🧀 🧀 🧀 🧀 🧀</h6>
+
+          <div id="navlink">
+            Please {formType} or {this.navLink()}
+          </div>
 
           <div className="login-form">
             <br/>
-            <label>Username:
+            <label>
               <input type="text"
+                placeholder="  👤   |   Username"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
               />
             </label>
-            <br/>
-            <label>Email:
-              <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="login-input"
-              />
+            <label>
+              {emailInput}
             </label>
-            <br/>
-            <label>Password:
+            <label>
               <input type="password"
+                placeholder="  🔒   |   Password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
               />
             </label>
-            <br/>
-            <input type="submit" value="Submit" />
+            <div id="session-submit">
+              <input className="session-submit"
+                type="submit"
+                value={submitButton} />
+            </div>
           </div>
         </form>
       </div>

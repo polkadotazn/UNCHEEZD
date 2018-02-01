@@ -9,13 +9,13 @@ import {
   HashRouter
 } from 'react-router-dom';
 import SessionFormContainer from './session_form/session_form_container';
-import Greeting from './navbar/logout_container';
+import SessionLog from './navbar/logout_container';
 
 const App = () => (
   <div id="App">
     <header id='masthead'>
 
-      <Greeting/>
+      <SessionLog />
       <span>
         <div id="welcome-sign">
           <Link to="/" id="title">
@@ -25,13 +25,14 @@ const App = () => (
           <h3>Discover and share your favorite cheeses.</h3>
         </div>
       </span>
-
+      <div id="login-form">
+        <Switch>
+          <AuthRoute exact path="/login" component={SessionFormContainer}/>
+          <AuthRoute exact path="/signup" component={SessionFormContainer}/>
+        </Switch>
+      </div>
     </header>
 
-    <Switch>
-      <AuthRoute exact path="/login" component={SessionFormContainer}/>
-      <AuthRoute exact path="/signup" component={SessionFormContainer}/>
-    </Switch>
 
   </div>
 );
