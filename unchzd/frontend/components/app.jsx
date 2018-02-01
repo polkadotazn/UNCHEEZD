@@ -12,18 +12,30 @@ import SessionFormContainer from './session_form/session_form_container';
 import Greeting from './navbar/logout_container';
 
 const App = () => (
-  <div>
-    <header>
+  <div id="App">
+    <header id='masthead'>
+
       <Greeting/>
-      <Link to="/" >
-        <h1>UNCHEEZD</h1>
-      </Link>
+      <span>
+        <div id="welcome-sign">
+          <Link to="/" id="title">
+            <h1>UNCHEEZD</h1>
+          </Link>
+          <h6>CHEESE OUT</h6>
+          <h3>Discover and share your favorite cheeses.</h3>
+        </div>
+      </span>
+
     </header>
+
     <Switch>
       <AuthRoute exact path="/login" component={SessionFormContainer}/>
       <AuthRoute exact path="/signup" component={SessionFormContainer}/>
     </Switch>
+
   </div>
 );
 
 export default App;
+
+// <img id='masthead' src='http://i64.tinypic.com/3538hme.jpg' />

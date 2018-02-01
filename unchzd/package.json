@@ -43,5 +43,8 @@
     "url": "https://github.com/polkadotazn/UNCHEEZD/issues"
   },
   "homepage": "https://github.com/polkadotazn/UNCHEEZD#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "file-loader": "^1.1.6",
+    "url-loader": "^0.6.2"
+  }
 }

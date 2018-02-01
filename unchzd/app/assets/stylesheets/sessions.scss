@@ -1,3 +1,136 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form {
+  display: none;
+}
+
+.displayForm {
+  position: relative;
+  top: 100px;
+  left: 50%;
+  margin-left: -220px;
+  width: 300px;
+  min-height: 400px;
+  padding: 20px;
+  background: #fff;
+  z-index: 3;
+  border-radius: 20px;
+  border: 1px solid #000;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.7)
+}
+
+.login-form {
+  margin: 0 auto;
+  position: relative;
+}
+
+nav {
+  height: 90px;
+  display: flex;
+  width: inherit;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+}
+#app {
+  display:block;
+}
+
+#masthead {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to right, rgba(0,0,0,.8), rgba(0,0,0,0.8)), url(http://i64.tinypic.com/3538hme.jpg);
+  background-size: cover;
+  background-position: center top;
+  height: 900px;
+  z-index: -1;
+  width: 100%;
+}
+
+// linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(../images/beer-bg.jpg);
+
+.session-button {
+  height: 20px;
+  width: auto;
+  margin-right: 18px;
+  display: inline-block;
+  font-family: helvetica;
+  font-size: 15px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0px;
+  background-color: black;
+  padding: 13px 18px 13px 18px;
+  border: 2px solid white;
+  text-align: justify;
+  border-radius: 2px;
+}
+
+.session-button:hover {
+  background: white;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#welcome-sign {
+  font-family: helvetica;
+  color: white;
+  h1 {
+    // font-family: cursive;
+    // font-family: 'Oxygen Mono', monospace;
+    font-family: 'Pragati Narrow', sans-serif;
+    font-size: 70px;
+    padding-bottom: 0;
+    -webkit-margin-after: 0;
+  }
+  h1:hover {
+    color: yellow;
+  }
+  h6 {
+    -webkit-margin-before: 0;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  h3 {
+    font-family: helvetica;
+    font-weight: 400;
+    font-size: 21px;
+  }
+  a:link {
+    color: white;
+    text-decoration: none;
+  }
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+span {
+  position: absolute;
+  top: 27%;
+  left: 13.5%;
+  display: flex;
+  // width: 100%;
+  justify-content: flex-start;
+
+}
+
+div #welcome-sign{
+  // margin: 150px;
+  text-align: center;
+}
