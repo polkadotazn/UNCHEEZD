@@ -61,12 +61,18 @@
     font-family: 'Heebo', sans-serif;
     color: white;
     margin-top: 10px;
-    margin-bottom: 30px;
   }
   .session-submit:hover {
     background-color: #E8B200;
   }
+  #session-submit2 {
+    margin-bottom: 30px;
+  }
+  #session-submit1 {
+    margin-bottom: 30px;
+  }
 }
+
 
 .login-form-container {
   position: fixed;
@@ -129,4 +135,8 @@ div#x {
   padding-top: 3px;
   float: right;
   margin-left: 347px;
+}
+
+input {
+  padding-left: 7px;
 }

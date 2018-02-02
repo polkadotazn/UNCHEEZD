@@ -56,7 +56,7 @@ nav {
     url(http://i64.tinypic.com/3538hme.jpg);
   background-size: cover;
   background-position: center top;
-  height: 1000px;
+  height: 100vh;
   z-index: -1;
   width: 100%;
 }
@@ -71,6 +71,7 @@ button {
   background-color: transparent;
 }
 .session-button {
+  // box-sizing: border-box;
   height: 20px;
   width: auto;
   margin-right: 18px;
@@ -81,7 +82,7 @@ button {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0px;
-  background-color: black;
+  background-color: transparent;
   padding: 13px 18px 13px 18px;
   border: 2px solid white;
   text-align: justify;
@@ -92,7 +93,7 @@ button {
   background: white;
   color: black;
   cursor: pointer;
-  font-weight: bold;
+  // font-weight: bold;
 }
 
 #welcome-sign {

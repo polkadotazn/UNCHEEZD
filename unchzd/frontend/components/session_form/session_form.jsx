@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter, Redirect } from 'react-router-dom';
+import DemoLogin from './demo_login_container';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class SessionForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-      console.log('RECEIVE_NEW_PROPS');
+      console.info('RECEIVE_NEW_PROPS');
       console.log(nextProps);
       console.log(this.props);
       if(this.props.match.path === nextProps.match.path){
@@ -36,7 +37,6 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     this.props.processForm({user});
-    console.log(this.props.errors);
   }
 
   navLink () {
@@ -75,9 +75,13 @@ class SessionForm extends React.Component {
     let emailInput;
     let submitButton = "Sign In";
     let formType = "log in";
+    let demoLogin = "";
+    let loginButtonMargin = "session-submit1";
     if (this.props.formType !== 'login') {
+      loginButtonMargin = "";
+      demoLogin = <DemoLogin/>;
       emailInput = <input type="text"
-        placeholder="  📧   |   Email Address"
+        placeholder=" 📧   |   Email Address"
         value={this.state.email}
         onChange={this.update('email')}
         className="login-input"
@@ -93,15 +97,12 @@ class SessionForm extends React.Component {
       </div>;
     let navOrSesh = navLink;
     if (!this.state.errors || this.state.errors.length === 0) {
-      console.log("IS IT WORKING");
       seshErr = "";
       navOrSesh = navLink;
     } else {
       navLink = "";
       navOrSesh = seshErr;
     }
-    console.log("wsup");
-    console.log(this.state.errors);
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -118,7 +119,7 @@ class SessionForm extends React.Component {
             <br/>
             <label>
               <input type="text"
-                placeholder="  👤   |   Username"
+                placeholder=" 👤   |   Username"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
@@ -129,17 +130,18 @@ class SessionForm extends React.Component {
             </label>
             <label>
               <input type="password"
-                placeholder="  🔒   |   Password"
+                placeholder=" 🔒   |   Password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
               />
             </label>
-            <div id="session-submit">
+            <div id={loginButtonMargin}>
               <input className="session-submit"
                 type="submit"
                 value={submitButton} />
             </div>
+            {demoLogin}
           </div>
         </form>
       </div>
