@@ -5,7 +5,7 @@
   margin-left: -220px;
   width: 360px;
   padding: 10px;
-  background: #fff;
+  background: #FAFAF3;
   z-index: 3;
   border-radius: 3px;
   border: 1px solid #000;
@@ -23,7 +23,7 @@
     text-align: center;
     margin: 0;
     font-size: 27px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     font-family: helvetica;
     color: #FFC300;
   }
@@ -74,7 +74,7 @@
   bottom:0;
   left: 0;
   right: 0;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.65);
   z-index: 1;
 }
 
@@ -96,6 +96,21 @@
   border-radius: 3px;
   border-style: solid;
   border-color: #d3d3d3;
+}
+
+div#sesh-error {
+  width: auto;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: center;
+  list-style-type: none;
+  font-family: helvetica;
+  color: white;
+  background-color: #ff9494;
+  padding: 4px;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: lighter;
 }
 
 div#x {

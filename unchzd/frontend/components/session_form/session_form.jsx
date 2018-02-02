@@ -7,13 +7,20 @@ class SessionForm extends React.Component {
     this.state = {
       username: '',
       email: '',
-      password: ''
+      password: '',
+      errors: null
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.setRedirect = this.setRedirect.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
+      console.log('RECEIVE_NEW_PROPS');
+      console.log(nextProps);
+      console.log(this.props);
+      if(this.props.match.path === nextProps.match.path){
+        this.setState({errors: nextProps.errors});
+      }
     if (nextProps.loggedIn) {
       this.props.history.push('/');
     }
@@ -29,19 +36,31 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     this.props.processForm({user});
+    console.log(this.props.errors);
   }
 
-  navLink() {
+  navLink () {
     if (this.props.formType === 'login') {
-      return <Link to="/signup">sign up here</Link>;
+      return <Link  to="/signup">sign up here</Link>;
     } else {
       return <Link to="/login">log in here</Link>;
     }
   }
 
+  errors () {
+    if (this.state.errors) {
+      return (
+        this.state.errors.map(error => {
+          return (<li className="error" key={error}>{error}</li>);
+        })
+      );
+    }
+  }
+
   setRedirect () {
      this.setState({
-       redirect: true
+       redirect: true,
+       errors: null
      });
    }
 
@@ -66,6 +85,23 @@ class SessionForm extends React.Component {
       submitButton = "Create Account";
       formType = "sign up";
     }
+    let navLink = <div id="navlink">
+      Please {formType} or {this.navLink()}
+    </div>;
+    let seshErr = <div id="sesh-error">
+          {this.errors()}
+      </div>;
+    let navOrSesh = navLink;
+    if (!this.state.errors || this.state.errors.length === 0) {
+      console.log("IS IT WORKING");
+      seshErr = "";
+      navOrSesh = navLink;
+    } else {
+      navLink = "";
+      navOrSesh = seshErr;
+    }
+    console.log("wsup");
+    console.log(this.state.errors);
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -77,11 +113,7 @@ class SessionForm extends React.Component {
           </div>
           <h1>UNCHEEZD</h1>
           <h6>🧀 🧀 🧀 🧀 🧀</h6>
-
-          <div id="navlink">
-            Please {formType} or {this.navLink()}
-          </div>
-
+          {navOrSesh}
           <div className="login-form">
             <br/>
             <label>
