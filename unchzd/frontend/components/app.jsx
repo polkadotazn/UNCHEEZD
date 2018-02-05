@@ -8,32 +8,23 @@ import {
   Link,
   HashRouter
 } from 'react-router-dom';
+
+import FrontAndSession from './session_form/front_and_session';
+import FrontPage from './session_form/front_page';
 import SessionFormContainer from './session_form/session_form_container';
 import SessionLog from './navbar/logout_container';
+import CheeseIndexContainer from './cheese/cheese_index_container';
 
 const App = () => (
   <div id="App">
-    <header id='masthead'>
-
-      <SessionLog />
-      <span>
-        <div id="welcome-sign">
-          <Link to="/" id="title">
-            <h1>UNCHEEZD</h1>
-          </Link>
-          <h6>CHEESE OUT</h6>
-          <h3>Discover and share your favorite cheeses.</h3>
-        </div>
-      </span>
-      <div id="login-form">
-        <Switch>
-          <AuthRoute exact path="/login" component={SessionFormContainer}/>
-          <AuthRoute exact path="/signup" component={SessionFormContainer}/>
-        </Switch>
-      </div>
-    </header>
-
-
+    <SessionLog />
+    <Switch>
+      <AuthRoute exact path="/" component={FrontPage} />
+      <AuthRoute exact path="/login" component={FrontAndSession} />
+      <AuthRoute exact path="/signup" component={FrontAndSession} />
+      <ProtectedRoute exact path="/cheeseboard"
+        component={CheeseIndexContainer} />
+    </Switch>
   </div>
 );
 

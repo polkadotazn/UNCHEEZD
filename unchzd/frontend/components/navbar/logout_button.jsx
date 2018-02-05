@@ -17,7 +17,7 @@ const logoutButton = (currentUser, logout) => (
 );
 
 const sessionLog = ({ currentUser, logout }) => (
-  currentUser ? logoutButton(currentUser, logout) : sessionLinks()
+  currentUser ? logoutButton(currentUser, logout) : null
 );
 
 export default sessionLog;
