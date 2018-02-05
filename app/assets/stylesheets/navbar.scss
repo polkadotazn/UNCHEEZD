@@ -1,0 +1,21 @@
+hgroup.inner-navbar {
+  font-family: helvetica;
+  background-color: #FFC300;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .logout-button {
+    float: right;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: white;
+    border: 1px solid black;
+    -webkit-appearance: none;
+    box-sizing: content-box;
+    display: flex;
+  }
+  .cheeseboard {
+    align-self: center;
+
+  }
+}
