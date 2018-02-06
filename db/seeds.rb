@@ -17,34 +17,34 @@
 #        'vine whip'
 #     ],
 #   },
-  # 
-  # guest1 = User.create!(
-  #   username: 'cheese_lover',
-  #   email: 'cheesy_one@mail.net',
-  #   password: 'password1',
-  #   location: 'San Francisco, CA'
-  # )
-  #
-  # guest2 = User.create!(
-  #   username: 'the_big_cheese',
-  #   email: 'cheesy_two@mail.net',
-  #   password: 'password2',
-  #   location: 'Philadelphia, PA'
-  # )
-  #
-  # guest3 = User.create!(
-  #   username: 'cheesehead',
-  #   email: 'cheesy_three@mail.net',
-  #   password: 'password3',
-  #   location: 'Champaign, IL'
-  # )
-  #
-  # guest4 = User.create!(
-  #   username: 'guest',
-  #   email: 'guest@mail.net',
-  #   password: 'password',
-  #   location: 'Boston, MA'
-  # )
+  
+  guest1 = User.create!(
+    username: 'cheese_lover',
+    email: 'cheesy_one@mail.net',
+    password: 'password1',
+    location: 'San Francisco, CA'
+  )
+
+  guest2 = User.create!(
+    username: 'the_big_cheese',
+    email: 'cheesy_two@mail.net',
+    password: 'password2',
+    location: 'Philadelphia, PA'
+  )
+
+  guest3 = User.create!(
+    username: 'cheesehead',
+    email: 'cheesy_three@mail.net',
+    password: 'password3',
+    location: 'Champaign, IL'
+  )
+
+  guest4 = User.create!(
+    username: 'guest',
+    email: 'guest@mail.net',
+    password: 'password',
+    location: 'Boston, MA'
+  )
 
   guest5 = User.create!(
     username: 'fake_user',
