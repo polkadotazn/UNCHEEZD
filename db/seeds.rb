@@ -21,21 +21,21 @@
   guest1 = User.create!(
     username: 'cheese_lover',
     email: 'cheesy_one@mail.net',
-    password: 'password',
+    password: 'password1',
     location: 'San Francisco, CA'
   )
 
   guest2 = User.create!(
     username: 'the_big_cheese',
     email: 'cheesy_two@mail.net',
-    password: 'password',
+    password: 'password2',
     location: 'Philadelphia, PA'
   )
 
   guest3 = User.create!(
     username: 'cheesehead',
     email: 'cheesy_three@mail.net',
-    password: 'password',
+    password: 'password3',
     location: 'Champaign, IL'
   )
 
@@ -44,6 +44,55 @@
     email: 'guest@mail.net',
     password: 'password',
     location: 'Boston, MA'
+  )
+
+  guest5 = User.create!(
+    username: 'fake_user',
+    email: 'fake@mail.net',
+    password: 'password5',
+    location: 'Hoboken, NJ'
+  )
+
+  guest6 = User.create!(
+    username: 'guest',
+    email: 'guest1@mail.net',
+    password: 'password6',
+    location: 'Wilmington, NC'
+  )
+
+  guest7 = User.create!(
+    username: 'guest',
+    email: 'guest2@mail.net',
+    password: 'password7',
+    location: 'Orlando, FL'
+  )
+
+  guest8 = User.create!(
+    username: 'guest',
+    email: 'guest3@mail.net',
+    password: 'password8',
+    location: 'Austin, TX'
+  )
+
+  guest9 = User.create!(
+    username: 'guest',
+    email: 'guest4@mail.net',
+    password: 'password9',
+    location: 'Seattle, WA'
+  )
+
+  guest10 = User.create!(
+    username: 'guest',
+    email: 'guest5@mail.net',
+    password: 'password10',
+    location: 'San Diego, CA'
+  )
+
+  guest11 = User.create!(
+    username: 'guest',
+    email: 'guest6@mail.net',
+    password: 'password11',
+    location: 'CDMX'
   )
 
   cheese1 = Cheese.create!(
@@ -71,6 +120,62 @@
   )
 
   cheese4 = Cheese.create!(
+    name: 'Gruyère',
+    description: 'Good melting cheese',
+    brand: 'Trader Joe\'s',
+    origin: 'Switzerland',
+    category: 'swiss'
+  )
+
+  cheese5 = Cheese.create!(
+    name: 'Gruyère',
+    description: 'Good melting cheese',
+    brand: 'Trader Joe\'s',
+    origin: 'Switzerland',
+    category: 'swiss'
+  )
+
+  cheese6 = Cheese.create!(
+    name: 'Gruyère',
+    description: 'Good melting cheese',
+    brand: 'Trader Joe\'s',
+    origin: 'Switzerland',
+    category: 'swiss'
+  )
+
+  cheese7 = Cheese.create!(
+    name: 'Gruyère',
+    description: 'Good melting cheese',
+    brand: 'Trader Joe\'s',
+    origin: 'Switzerland',
+    category: 'swiss'
+  )
+
+  cheese8 = Cheese.create!(
+    name: 'Gruyère',
+    description: 'Good melting cheese',
+    brand: 'Trader Joe\'s',
+    origin: 'Switzerland',
+    category: 'swiss'
+  )
+
+  cheese9 = Cheese.create!(
+    name: 'Gruyère',
+    description: 'Good melting cheese',
+    brand: 'Trader Joe\'s',
+    origin: 'Switzerland',
+    category: 'swiss'
+  )
+
+  cheese10 = Cheese.create!(
+    name: 'Gruyère',
+    description: 'Good melting cheese',
+    brand: 'Trader Joe\'s',
+    origin: 'Switzerland',
+    category: 'swiss'
+  )
+
+  cheese11 = Cheese.create!(
     name: 'Gruyère',
     description: 'Good melting cheese',
     brand: 'Trader Joe\'s',

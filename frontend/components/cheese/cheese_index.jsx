@@ -1,5 +1,6 @@
 import React from 'react';
 import CheeseItem from './cheese_item';
+import { Link } from 'react-router-dom';
 
 class CheeseIndex extends React.Component {
   componentDidMount() {
@@ -9,7 +10,8 @@ class CheeseIndex extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="cheese-idx-page">
+        <Link to="/cheese/new">Add Cheese</Link>
         <ul>
           {
             this.props.cheeses.map(cheese => (

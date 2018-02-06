@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Pragati+Narrow:400,700&amp;subset=devanagari,latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,700" rel="stylesheet">
     <%= javascript_include_tag 'application' %>
+    <script type="text/javascript">
+      window.CHZ_TYPES = <%= raw Cheese::TYPES %>
+    </script>
   </head>
 
   <body>

@@ -14,6 +14,7 @@ import FrontPage from './session_form/front_page';
 import SessionFormContainer from './session_form/session_form_container';
 import SessionLog from './navbar/logout_container';
 import CheeseIndexContainer from './cheese/cheese_index_container';
+import AddCheeseContainer from './cheese/add_cheese_container';
 
 const App = () => (
   <div id="App">
@@ -24,6 +25,8 @@ const App = () => (
       <AuthRoute exact path="/signup" component={FrontAndSession} />
       <ProtectedRoute exact path="/cheeseboard"
         component={CheeseIndexContainer} />
+      <ProtectedRoute exact path="/cheese/new"
+        component={AddCheeseContainer} />
     </Switch>
   </div>
 );

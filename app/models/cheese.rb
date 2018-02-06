@@ -14,7 +14,7 @@ class Cheese < ApplicationRecord
     'goat/sheep',
     'processed',
     'other'
-  ]
+  ].sort.freeze
 
   validates :name, :description, :brand, presence: true
   validates :name, uniqueness: true
