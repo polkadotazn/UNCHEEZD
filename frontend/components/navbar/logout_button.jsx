@@ -11,12 +11,16 @@ const sessionLinks = () => (
 
 const logoutButton = (currentUser, logout) => (
 	<div className="inner-navbar">
-    <Link to="/" id="title">
-      <h1>UNCHEEZD</h1>
-    </Link>
-    <h4 className="header-name">Hey there, {currentUser.username}!</h4>
-    <Link to="/cheeseboard" className="cheeseboard">Cheese Board</Link>
-    <button className="logout-button" onClick={logout}>Log Out</button>
+    <div className="func-navbar">
+      <div className="left-nav">
+        <Link to="/" id="title">
+          <h1>UNCHEEZD</h1>
+        </Link>
+        <Link to="/cheeseboard" className="cheeseboard">Cheese Board</Link>
+      </div>
+
+      <button className="logout-button" onClick={logout}>Log Out</button>
+    </div>
 	</div>
 );
 

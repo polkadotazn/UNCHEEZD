@@ -1,3 +1,19 @@
+.func-navbar {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-nav {
+  width: 100%;
+  max-width: 700px;
+  justify-content: flex-start;
+  display: flex;
+  // justify-content: space-around;
+}
+
 .inner-navbar {
   font-family: helvetica;
   background-color: #FFC300;
@@ -6,9 +22,9 @@
   justify-content: space-around;
   align-items: center;
   color: white;
-  text-transform: uppercase;
+
+
   .logout-button {
-    // float: right;
     text-transform: uppercase;
     cursor: pointer;
     font-size: 15px;
@@ -17,11 +33,12 @@
     border: 2px solid white;
     -webkit-appearance: none;
     box-sizing: content-box;
-    // display: flex;
     padding: 3px 12px;
     height: 20px;
     border-radius: 3px;
     margin-bottom: 2px;
+    align-self: center;
+    text-transform: uppercase;
   }
   .logout-button:hover {
     background-color: white;
@@ -29,13 +46,15 @@
   }
   .cheeseboard {
     align-self: center;
-
+    font-size: 18px;
   }
   h1 {
     text-align: center;
     margin: 0;
+    margin-right: 18px;
     font-family: 'Pragati Narrow', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
+    text-transform: uppercase;
   }
   h4 {
     font-weight: 400;

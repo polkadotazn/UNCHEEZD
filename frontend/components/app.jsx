@@ -15,6 +15,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import SessionLog from './navbar/logout_container';
 import CheeseIndexContainer from './cheese/cheese_index_container';
 import AddCheeseContainer from './cheese/add_cheese_container';
+import CheeseShowContainer from './cheese/cheese_show_container';
 
 const App = () => (
   <div id="App">
@@ -27,6 +28,8 @@ const App = () => (
         component={CheeseIndexContainer} />
       <ProtectedRoute exact path="/cheese/new"
         component={AddCheeseContainer} />
+      <ProtectedRoute path="/cheeses/:cheeseId"
+        component={CheeseShowContainer} />
     </Switch>
   </div>
 );

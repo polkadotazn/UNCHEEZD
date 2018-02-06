@@ -1,0 +1,82 @@
+// Place all the styles related to the cheeses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cheese-idx-page {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.chz-idx-top {
+  background-color: #E7E7E7;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.add-chz-button {
+  font-family: helvetica;
+  border: 2px solid #c60;
+  border-radius: 3px;
+  float: right;
+  color: #c60;
+  padding: 4px 12px 5px 12px;
+  margin-right: 18px;
+  height: 20px;
+  .plus {
+    font-size: 20px;
+  }
+}
+.add-chz-button:hover {
+  background-color: #c60;
+  color: white;
+}
+.chz-title {
+  margin-left: 15px;
+  font-size: 30px;
+}
+
+#chz-name {
+  padding-top: 15px;
+  color: #c60;
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+#chz-brand {
+  color: #c60;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+#chz-type {
+  color: #474747;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.chz-item-box {
+  background-color: #FCFBF9;
+  font-family: verdana;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid #E7E7E7;
+  padding-bottom: 15px;
+}
+
+.chz-item-box:last-of-type {
+  margin-bottom: 25px;
+}
+
+ul {
+  padding: 0;
+  display: block;
+  list-style-type: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}

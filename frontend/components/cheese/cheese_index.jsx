@@ -11,7 +11,12 @@ class CheeseIndex extends React.Component {
   render () {
     return (
       <div className="cheese-idx-page">
-        <Link to="/cheese/new">Add Cheese</Link>
+        <div className="chz-idx-top">
+          <h1 className="chz-title">Cheese Board</h1>
+          <Link className="add-chz-button" to="/cheese/new">
+            <tag className="plus">+ </tag> Add New Cheese
+          </Link>
+        </div>
         <ul>
           {
             this.props.cheeses.map(cheese => (

@@ -8,10 +8,9 @@ const cheeseReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_ALL_CHEESES:
-
-      console.info(action.cheeses);
       return merge({}, state, action.cheeses);
     case RECEIVE_A_CHEESE:
+      console.log(action.cheese);
       return merge({}, state, {[action.cheese.id]: action.cheese});
     case REMOVE_CHEESE:
       let newState = merge({}, state);

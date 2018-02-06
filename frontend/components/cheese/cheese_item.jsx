@@ -4,15 +4,16 @@ import { Link } from 'react-router-dom';
 const CheeseItem = ({ cheese }) => {
   console.log(cheese);
   return (
-    <li>
-      <Link to={`/cheeses/${cheese.id}`}>
-        {cheese.name}
-      </Link>
+    <li className="chz-item-box">
       <ul>
-        <li>Brand: {cheese.brand}</li>
-        <li>Type: {cheese.category}</li>
-        <li>Description: {cheese.description}</li>
+        <Link to={`/cheeses/${cheese.id}`}>
+          <li id="chz-name">{cheese.name}</li>
+        </Link>
+        <li id="chz-brand">{cheese.brand}</li>
+        <li id="chz-type">{cheese.category}</li>
+        <li id="description">{cheese.description}</li>
       </ul>
+
     </li>
   );
 };
