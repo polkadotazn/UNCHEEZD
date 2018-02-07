@@ -30,45 +30,75 @@ class AddCheese extends React.Component {
   }
 
   render () {
+    let welcomeSign = <div><h3>Edit Cheese</h3></div>;
+    if(this.props.formType === 'new') {
+      welcomeSign =
+      <div>
+        <h3>Add New Cheese</h3>
+        <h5>Didn't find what you were looking for? Use this form to add a new cheese.</h5>
+        <h4>Cheese Creation Guidelines</h4>
+        <ul className="chz-creation-rules">
+          <li>Don't include the brand or the store where you bought it in the cheese name.</li>
+          <li>Please make your cheese proper name case.</li>
+          <li>Do you have questions about which category your cheese belongs in? Please refer to this guide.</li>
+          <li>Please note that non-adherence to the guidelines may results in revoking of your Cheese Creation privileges.</li>
+        </ul>
+      </div>
+    }
     const text = this.props.formType === 'new' ? "Add Cheese" : "Update Cheese";
+    const state = this.state;
     return (
-      <div className="add-cheese-div">
-        <form className="add-cheese-form" onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            value={this.state.name}
-            placeholder="Name"
-            onChange={this.update('name')}
-          />
-          <input
-            type="text"
-            value={this.state.brand}
-            placeholder="Brand"
-            onChange={this.update('brand')}
-          />
-          <input
-            type="text"
-            value={this.state.origin}
-            placeholder="Origin"
-            onChange={this.update('origin')}
-          />
-          <select
-            value={this.state.category}
-            defaultValue="Select cheese style"
-            onChange={this.update('category')}
-          >
-            {CHZ_TYPES.map((t, i) => {
-              return <option value={t} key={i}>{t}</option>;
-            })}
-          </select>
-          <input
-            type="textarea"
-            value={this.state.description}
-            placeholder="Description"
-            onChange={this.update('description')}
-          />
-          <input type="submit" value={text} />
-        </form>
+      <div>
+        {state &&
+          <div className="add-cheese-div">
+            <div className="UGH">{welcomeSign}</div>
+            <form className="add-cheese-form" onSubmit={this.handleSubmit}>
+              <input
+                className="form-text"
+                type="text"
+                value={this.state.name}
+                placeholder="Name"
+                onChange={this.update('name')}
+              />
+              <input
+                className="form-text"
+                type="text"
+                value={this.state.brand}
+                placeholder="Brand"
+                onChange={this.update('brand')}
+              />
+              <div className="form-text-sect">
+                <input
+                  className="form-text1"
+                  type="text"
+                  value={this.state.origin}
+                  placeholder="Origin"
+                  onChange={this.update('origin')}
+                />
+                <div>
+                  <select
+                    className="form-text2"
+                    value={this.state.category}
+                    defaultValue="Select cheese style"
+                    onChange={this.update('category')}
+                  >
+                    {CHZ_TYPES.map((t, i) => {
+                      return <option value={t} key={i}>{t}</option>;
+                    })}
+                  </select>
+                </div>
+              </div>
+              <textarea
+                className="chz-description"
+                rows="5"
+                value={this.state.description}
+                placeholder="Description"
+                onChange={this.update('description')}
+              />
+            <input type="submit" id="chz-submit" value={text} />
+            </form>
+          </div>
+        }
       </div>
     );
   }

@@ -1,13 +1,13 @@
+
 .show-chz-box {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
   padding: 0;
-  #chz-name {
-    padding-bottom: 15px;
+  #chz-show-title {
     color: #c60;
     font-size: 22px;
-    margin-bottom: 3px;
+    margin-left: 15px;
   }
   #chz-brand {
     color: #c60;
@@ -18,8 +18,42 @@
     display: flex;
     color: #474747;
     font-size: 14px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    flex-direction: row;
+    justify-content: flex-start;
+    li {
+      margin-right: 10px;
+    }
   }
+}
+
+#show-buttons {
+  display: flex;
+  align-items: center;
+  #delete-chz {
+    font-family: helvetica;
+    border: 2px solid #c60;
+    border-radius: 3px;
+    float: right;
+    color: #c60;
+    padding: 6px 12px 4px 12px;
+    margin-right: 15px;
+    height: 20px;
+    font-size: 16px;
+    box-sizing: content-box;
+  }
+  #delete-chz:hover {
+    background-color: #c60;
+    color: white;
+  }
+}
+
+.show-chz-header {
+  background-color: #E7E7E7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
 }
 
 .edit-chz-button {
@@ -28,7 +62,7 @@
   border-radius: 3px;
   float: right;
   color: #c60;
-  padding: 6px 12px 5px 12px;
+  padding: 7px 12px 3px 12px;
   margin-right: 12px;
   height: 20px;
 
@@ -36,4 +70,14 @@
 .edit-chz-button:hover {
   background-color: #c60;
   color: white;
+}
+
+.main-chz-show {
+  background-color: #FCFBF9;
+  // font-family: verdana;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid #E7E7E7;
+  padding-bottom: 15px;
 }

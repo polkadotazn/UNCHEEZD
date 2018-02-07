@@ -1,0 +1,125 @@
+.add-cheese-div {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 25px 40px;
+  background-color: white;
+  margin-top: 25px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h5 {
+    width: 100%;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  h4 {
+    margin-bottom: 10px;
+    margin-top: 15px;
+    text-decoration: underline;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+  }
+  h3 {
+    width: 100%;
+  }
+}
+
+.UGH {
+  width: 100%;
+  max-width: 370px;
+}
+
+.add-cheese-form {
+  width: 100%;
+  max-width: 370px;
+}
+
+.chz-creation-rules {
+  padding-left: 17px;
+  margin-bottom: 20px;
+}
+
+.chz-creation-rules li {
+  list-style-type: disc;
+  font-size: 14px;
+  padding-bottom: 6px;
+}
+
+.form-text {
+  width: 100%;
+  max-width: 360px;
+  margin: 6px 0;
+  font-size: 15px;
+  align-self: center;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 26px;
+}
+
+.chz-description {
+  width: 100%;
+  max-width: 354px;
+  margin: 12px 0;
+  display: block;
+  align-content: flex-start;
+  font-size: 15px;
+  height: 100px;
+  border-radius: 4;
+  text-rendering: auto;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  padding: 7px;
+}
+
+.form-text-sect {
+  margin: 6px 0;
+  width: 100%;
+  max-width: 370px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .form-text1 {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    max-width: 190px;
+    width: 100%;
+    font-size: 15px;
+    margin-right: 6px;
+    height: 26px;
+  }
+  .form-text2 {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    max-width: 190px;
+    width: 100%;
+    font-size: 14px;
+    height: 30px;
+  }
+}
+
+#chz-submit {
+  width: 100%;
+  max-width: 400px;
+  cursor: pointer;
+  height: 20px;
+  background-color: #FFC300;
+  border: 1px solid #FFC300;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  height: 33px;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+#chz-submit:hover {
+  background-color: white;
+  border: 2px solid #FFC300;
+  color: #FFC300;
+}
