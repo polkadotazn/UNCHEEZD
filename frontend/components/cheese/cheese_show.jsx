@@ -8,16 +8,28 @@ class CheeseShow extends React.Component {
 
   render () {
     const cheese = this.props.cheese;
-
+    console.log(cheese);
     return (
       <div>
-        <div>
-          <h3>{cheese.name}</h3>
-          {cheese.brand}
-          {cheese.type}
-          {cheese.origin}
-          {cheese.description}
-        </div>
+        {cheese &&
+          <div className="show-chz-box">
+            <Link className="edit-chz-button"
+              to={`/cheeseboard/${cheese.id}/edit`}>
+              Edit Cheese
+            </Link>
+            <div className="main-chz-show">
+              <h3 id="chz-name">{cheese.name}</h3>
+              <div id="chz-type">{cheese.brand}
+              {cheese.category}
+              {cheese.origin}</div>
+              {cheese.description}
+            </div>
+            <button onClick={() => this.props.deleteCheese(cheese.id).then(() => {
+                this.props.history.push("/cheeseboard");
+              })}>
+              Delete Cheese
+            </button>
+        </div>}
       </div>
     );
   }

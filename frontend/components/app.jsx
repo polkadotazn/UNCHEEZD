@@ -26,10 +26,13 @@ const App = () => (
       <AuthRoute exact path="/signup" component={FrontAndSession} />
       <ProtectedRoute exact path="/cheeseboard"
         component={CheeseIndexContainer} />
-      <ProtectedRoute exact path="/cheese/new"
+      <ProtectedRoute exact path="/cheeseboard/new"
         component={AddCheeseContainer} />
-      <ProtectedRoute path="/cheeses/:cheeseId"
+      <ProtectedRoute exact path="/cheeseboard/:cheeseId"
         component={CheeseShowContainer} />
+      <ProtectedRoute path="/cheeseboard/:cheeseId/edit"
+        component={AddCheeseContainer} />
+      <Route render={() => <Redirect to="/" />} />
     </Switch>
   </div>
 );

@@ -1,24 +1,26 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import AddCheese from './add_cheese';
-import { requestCheese, createCheese, updateCheese }
+import { requestACheese, createCheese, updateCheese }
   from '../../actions/cheese_actions';
 
 const mapStateToProps = (state, ownProps) => {
   let cheese = { name: "", brand: "", category: "", description: "" };
   let formType = 'new';
   if (ownProps.match.path === "/cheeseboard/:cheeseId/edit") {
-    cheese = state.cheeses[ownProps.match.params.cheeseId];
+    cheese = state.cheese[ownProps.match.params.cheeseId];
     formType = "edit";
   }
   return { cheese, formType };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  const action = ownProps.match.path === "/cheeseboard" ?
+  console.log(ownProps);
+  const action = ownProps.match.path === "/cheeseboard/new" ?
     createCheese : updateCheese;
+  console.log(action);
   return {
-    requestCheese: id => dispatch(requestCheese(id)),
+    requestACheese: id => dispatch(requestACheese(id)),
     action: cheese => dispatch(action(cheese))
   };
 };

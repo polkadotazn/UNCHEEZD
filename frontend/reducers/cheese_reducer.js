@@ -14,7 +14,7 @@ const cheeseReducer = (state = {}, action) => {
       return merge({}, state, {[action.cheese.id]: action.cheese});
     case REMOVE_CHEESE:
       let newState = merge({}, state);
-      delete newState[action.cheeseId];
+      delete newState[action.cheese.id];
       return newState;
     default:
       return state;

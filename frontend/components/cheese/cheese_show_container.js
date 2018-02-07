@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import CheeseShow from './cheese_show';
-import { requestACheese } from '../../actions/cheese_actions';
+import { requestACheese, deleteCheese, updateCheese }
+  from '../../actions/cheese_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {cheese: state.cheese[ownProps.match.params.cheeseId]};
@@ -8,6 +9,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
   requestACheese: id => dispatch(requestACheese(id)),
+  deleteCheese: cheeseId => dispatch(deleteCheese(cheeseId)),
+
 });
 
 export default connect(

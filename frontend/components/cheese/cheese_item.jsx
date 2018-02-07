@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CheeseItem = ({ cheese }) => {
-  console.log(cheese);
   return (
     <li className="chz-item-box">
       <ul>
-        <Link to={`/cheeses/${cheese.id}`}>
+        <Link to={`/cheeseboard/${cheese.id}`}>
           <li id="chz-name">{cheese.name}</li>
         </Link>
         <li id="chz-brand">{cheese.brand}</li>

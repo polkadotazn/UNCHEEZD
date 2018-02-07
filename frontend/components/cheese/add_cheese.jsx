@@ -9,7 +9,7 @@ class AddCheese extends React.Component {
 
   componentDidMount() {
     if (this.props.match.params.cheeseId) {
-      this.props.requestCheese(this.props.match.params.cheeseId);
+      this.props.requestACheese(this.props.match.params.cheeseId);
     }
   }
 
@@ -47,8 +47,8 @@ class AddCheese extends React.Component {
             onChange={this.update('brand')}
           />
           <input
-            type="origin"
-            value={this.state.brand}
+            type="text"
+            value={this.state.origin}
             placeholder="Origin"
             onChange={this.update('origin')}
           />

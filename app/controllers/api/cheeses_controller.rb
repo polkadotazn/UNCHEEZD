@@ -26,28 +26,22 @@ class Api::CheesesController < ApplicationController
   def create
     @cheese = Cheese.new(cheese_params)
 
-    respond_to do |format|
-      if @cheese.save
-        format.html { redirect_to @cheese, notice: 'Cheese was successfully created.' }
-        format.json { render :show, status: :created, location: @cheese }
-      else
-        format.html { render :new }
-        format.json { render json: @cheese.errors, status: :unprocessable_entity }
-      end
+    if @cheese.save
+      render "api/cheeses/show"
+    else
+      render json: @cheese.errors, status: :unprocessable_entity
     end
+
   end
 
   # PATCH/PUT /cheeses/1
   # PATCH/PUT /cheeses/1.json
   def update
-    respond_to do |format|
-      if @cheese.update(cheese_params)
-        format.html { redirect_to @cheese, notice: 'Cheese was successfully updated.' }
-        format.json { render :show, status: :ok, location: @cheese }
-      else
-        format.html { render :edit }
-        format.json { render json: @cheese.errors, status: :unprocessable_entity }
-      end
+
+    if @cheese.update(cheese_params)
+      render "api/cheeses/show"
+    else
+      render json: @cheese.errors, status: :unprocessable_entity
     end
   end
 
@@ -55,10 +49,7 @@ class Api::CheesesController < ApplicationController
   # DELETE /cheeses/1.json
   def destroy
     @cheese.destroy
-    respond_to do |format|
-      format.html { redirect_to cheeses_url, notice: 'Cheese was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    render "api/cheeses/show"
   end
 
   private
@@ -69,6 +60,6 @@ class Api::CheesesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cheese_params
-      params.require(:cheese).permit(:name, :description, :type, :brand, :origin)
+      params.require(:cheese).permit(:name, :description, :category, :brand, :origin)
     end
 end

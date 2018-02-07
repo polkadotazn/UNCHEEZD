@@ -29,14 +29,14 @@ export const receiveCheeseErrors = errors => ({
 
 export const requestAllCheeses = () => dispatch => {
   console.log("CHEESE");
-  
+
   return CheeseAPIUtil.fetchAllCheeses().then(cheeses => {
     console.log(cheeses);
     return dispatch(receiveAllCheeses(cheeses));
   });
 };
 
-export const requestCheese = id => dispatch => {
+export const requestACheese = id => dispatch => {
   return CheeseAPIUtil.fetchACheese(id).then(cheese => (
     dispatch(receiveACheese(cheese))
   ));
@@ -48,13 +48,13 @@ export const createCheese = cheese => dispatch => {
   ));
 };
 
-export const updateACheese = cheese => dispatch => {
+export const updateCheese = cheese => dispatch => {
   return CheeseAPIUtil.updateCheese(cheese).then(cheese => (
     dispatch(receiveACheese(cheese))
   ));
 };
 
-export const removeACheese = cheeseId => dispatch => {
+export const deleteCheese = cheeseId => dispatch => {
   return CheeseAPIUtil.deleteCheese(cheeseId).then(cheese => (
     dispatch(removeCheese(cheese))
   ));
