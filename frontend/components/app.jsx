@@ -16,6 +16,7 @@ import SessionLog from './navbar/logout_container';
 import CheeseIndexContainer from './cheese/cheese_index_container';
 import AddCheeseContainer from './cheese/add_cheese_container';
 import CheeseShowContainer from './cheese/cheese_show_container';
+import ReviewIndexContainer from './reviews/review_index_container';
 
 const App = () => (
   <div id="App">

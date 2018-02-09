@@ -1,1 +1,1 @@
-json.partial! "cheese_reviews/cheese_review", cheese_review: @cheese_review
+json.extract! @cheese_review, :id, :cheese_id, :user_id, :rating, :review

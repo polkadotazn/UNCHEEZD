@@ -1,7 +1,7 @@
 // https://www.npmjs.com/package/react-stars
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
 import Rating from 'react-rating';
 
@@ -12,10 +12,13 @@ class ReviewForm extends React.Component {
     this.state = {
       rating: 0,
       review: "",
+      cheese_id: this.props.cheeseId,
+      user_id: this.props.userId,
       modalOpen: false,
     };
-
-    this.closeModal = this.closeModal.bind(this);
+    console.log("props",this.props);
+    console.log("state",this.state);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
@@ -77,13 +80,17 @@ class ReviewForm extends React.Component {
     }
     return (
       <div className="review-form-container">
-        <button onClick={this.openModal}>Review this cheese</button>
+        <button className="review-btn" onClick={this.openModal}>
+          Review this cheese
+        </button>
         <Modal
           isOpen={this.state.modalOpen}
           onrequestClose={this.state.closeModal}
           contentLabel="cheese-rating"
           className="review-modal"
           style={ this.modalStyle() }
+          shouldCloseOnOverlayClick={true}
+          ariaHideApp={false}
         >
           <div className="inner-modal">
 
@@ -129,4 +136,4 @@ class ReviewForm extends React.Component {
 
 }
 
-export default ReviewForm;
+export default withRouter(ReviewForm);

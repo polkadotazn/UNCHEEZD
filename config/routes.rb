@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json} do
     resources :cheeses do
-      resources :cheese_reviews, only: [:create, :new, :index]
+      resources :cheese_reviews, only: [:create]
     end
-    resources :cheese_reviews, only: [:update, :edit, :destroy]
+    resources :cheese_reviews, except: [:create]
     resources :users
     resource :session, only: [:create, :destroy, :show]
   end

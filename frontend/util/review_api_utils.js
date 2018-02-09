@@ -1,7 +1,7 @@
-export const fetchAllReviews = cheeseId => (
+export const fetchAllReviews = () => (
   $.ajax({
     method: 'GET',
-    url: `api/cheeses/${cheeseId}/cheese_reviews`
+    url: `api/cheese_reviews`
   })
 );
 

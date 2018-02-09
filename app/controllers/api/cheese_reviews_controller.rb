@@ -25,15 +25,10 @@ class Api::CheeseReviewsController < ApplicationController
   # POST /cheese_reviews.json
   def create
     @cheese_review = CheeseReview.new(cheese_review_params)
-
-    respond_to do |format|
-      if @cheese_review.save
-        format.html { redirect_to @cheese_review, notice: 'Cheese review was successfully created.' }
-        format.json { render :show, status: :created, location: @cheese_review }
-      else
-        format.html { render :new }
-        format.json { render json: @cheese_review.errors, status: :unprocessable_entity }
-      end
+    if @cheese_review.save
+      render "api/cheese_reviews/show"
+    else
+      render json: @cheese_review.errors, status: :unprocessable_entity
     end
   end
 
@@ -69,6 +64,6 @@ class Api::CheeseReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cheese_review_params
-      params.require(:cheese_review).permit(:cheese_id, :user_id, :rating, :review)
+      params.require(:review).permit(:cheese_id, :user_id, :rating, :review)
     end
 end

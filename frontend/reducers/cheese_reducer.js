@@ -2,7 +2,7 @@ import merge from 'lodash/merge';
 
 import { RECEIVE_ALL_CHEESES,
   RECEIVE_A_CHEESE,
-  REMOVE_CHEESE } from '../actions/cheese_actions.js';
+  REMOVE_CHEESE } from '../actions/cheese_actions';
 
 const cheeseReducer = (state = {}, action) => {
   Object.freeze(state);

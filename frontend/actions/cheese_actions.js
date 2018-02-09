@@ -28,10 +28,7 @@ export const receiveCheeseErrors = errors => ({
 });
 
 export const requestAllCheeses = () => dispatch => {
-  console.log("CHEESE");
-
   return CheeseAPIUtil.fetchAllCheeses().then(cheeses => {
-    console.log(cheeses);
     return dispatch(receiveAllCheeses(cheeses));
   });
 };

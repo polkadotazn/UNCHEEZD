@@ -15,10 +15,8 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  console.log(ownProps);
   const action = ownProps.match.path === "/cheeseboard/new" ?
     createCheese : updateCheese;
-  console.log(action);
   return {
     requestACheese: id => dispatch(requestACheese(id)),
     action: cheese => dispatch(action(cheese))

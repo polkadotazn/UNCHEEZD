@@ -14,7 +14,8 @@ const mapStateToProps = (state, ownProps) => {
   return {
     cheeseReview: cheeseReview,
     currentUser: state.session.currentUser,
-    cheeseId: ownProps.cheeseId
+    cheeseId: parseInt(ownProps.match.params.cheeseId),
+    userId: state.session.currentUser.id
   };
 };
 
