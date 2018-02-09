@@ -54,7 +54,13 @@
   position: relative;
 }
 
+.line2-review {
+  display: flex;
+  justify-content: flex-start;
+}
+
 textarea {
+  padding: 2px 3px;
   margin-top: 3px;
   font-size: 15px;
 }

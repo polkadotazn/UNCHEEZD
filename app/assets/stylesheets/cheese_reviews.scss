@@ -29,3 +29,40 @@
     color: white;
   }
 }
+
+.review-item {
+  display: flex;
+  margin-top: 12px;
+  background-color: #FCFBF9;
+  padding: 15px;
+  justify-content: space-around;
+}
+
+.line2-review {
+  display: flex;
+  justify-content: flex-start;
+}
+blockquote {
+  font-family: Times;
+  font-size: 18px;
+}
+
+.quote {
+  font-size: 25px;
+}
+
+.line1-review {
+  display: inline-block;
+  span {
+    position: relative;
+    top: auto;
+    left: auto;
+    align-self: center;
+    top: 5px;
+    left: 10px;
+  }
+  .star {
+    height: 25px;
+    margin-left: 3px;
+  }
+}

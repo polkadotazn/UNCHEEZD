@@ -6,7 +6,7 @@ const ReviewItem = ({ review, user }) => {
   return (
     <div className="review-item">
       <div className="line1-review">
-        {user.username} gave a rating of:
+        <div className="text">{user.username} gave a rating of:</div>
         <Rating
           className="star-rating"
           emptySymbol={<img src="http://i68.tinypic.com/21l06bn.png"
@@ -19,7 +19,11 @@ const ReviewItem = ({ review, user }) => {
         />
       </div>
       <div className="line2-review">
-        <blockquote>{review.review}</blockquote>
+        <blockquote>
+          <i><b className="quote">“ </b>
+            {review.review}
+          <b className="quote"> ”</b></i>
+        </blockquote>
       </div>
     </div>
   );
