@@ -1,5 +1,3 @@
-// https://www.npmjs.com/package/react-stars
-
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Modal from 'react-modal';
