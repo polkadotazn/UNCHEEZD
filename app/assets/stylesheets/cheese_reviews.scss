@@ -41,11 +41,13 @@
 .line2-review {
   display: flex;
   justify-content: flex-start;
-  max-width: 600px;
+  width: 60%;
 }
 blockquote {
   font-family: Times;
   font-size: 18px;
+  -webkit-margin-before: 10px;
+  -webkit-margin-after: 10px;
 }
 
 .quote {
@@ -53,7 +55,8 @@ blockquote {
 }
 
 .line1-review {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   span {
     position: relative;
     top: auto;
@@ -65,5 +68,9 @@ blockquote {
   .star {
     height: 25px;
     margin-left: 3px;
+  }
+  .inner {
+    display: inline-block;
+    vertical-align: middle;
   }
 }
