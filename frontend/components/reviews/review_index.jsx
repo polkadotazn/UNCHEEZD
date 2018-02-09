@@ -10,7 +10,6 @@ class ReviewIndex extends React.Component {
 
   render () {
     const users = this.props.users;
-    console.log("users",users);
     return (
       <div className="review-idx">
         {Object.values(this.props.reviews).map(review => {

@@ -14,8 +14,6 @@ class ReviewForm extends React.Component {
       user_id: this.props.userId,
       modalOpen: false,
     };
-    console.log("props",this.props);
-    console.log("state",this.state);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);

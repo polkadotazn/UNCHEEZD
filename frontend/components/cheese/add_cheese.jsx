@@ -74,7 +74,6 @@ class AddCheese extends React.Component {
     }
     const text = this.props.formType === 'new' ? "Add Cheese" : "Update Cheese";
     const state = this.state;
-    console.log(this.state);
     return (
       <div>
         {state &&
