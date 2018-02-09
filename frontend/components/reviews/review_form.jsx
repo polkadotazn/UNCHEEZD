@@ -19,9 +19,7 @@ class ReviewForm extends React.Component {
     this.closeModal = this.closeModal.bind(this);
   }
 
-  componentDidMount () {
 
-  }
 
   modalStyle () {
     return {
@@ -69,6 +67,16 @@ class ReviewForm extends React.Component {
     );
   }
 
+  renderErrors () {
+    return (
+      <ul className="reviewErrors">
+        {
+          this.props.errors.map((err, idx) => <li key={idx}>{err}</li>)
+        }
+      </ul>
+    );
+  }
+
   render () {
 
     if(!this.state) {
@@ -97,6 +105,7 @@ class ReviewForm extends React.Component {
                 onClick={this.closeModal}
                 src="http://i66.tinypic.com/71iwxi.png"/>
             </div>
+            {this.renderErrors()}
             <form onSubmit={this.handleSubmit}>
               <div className="modal-form-div">
                 <div className="chz-rating">

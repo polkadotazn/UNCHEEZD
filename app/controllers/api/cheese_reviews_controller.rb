@@ -28,7 +28,7 @@ class Api::CheeseReviewsController < ApplicationController
     if @cheese_review.save
       render "api/cheese_reviews/show"
     else
-      render json: @cheese_review.errors, status: :unprocessable_entity
+      render json: @cheese_review.errors, status: 422
     end
   end
 

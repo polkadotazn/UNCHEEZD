@@ -10,12 +10,13 @@ const mapStateToProps = (state, ownProps) => {
   if (ownProps.starReview) {
     cheeseReview = ownProps.starReview;
   }
-
+  console.log("STTTATE", state);
   return {
     cheeseReview: cheeseReview,
     currentUser: state.session.currentUser,
     cheeseId: parseInt(ownProps.match.params.cheeseId),
-    userId: state.session.currentUser.id
+    userId: state.session.currentUser.id,
+    errors: state.reviewErrors
   };
 };
 
