@@ -3,6 +3,21 @@ import { Link } from 'react-router-dom';
 import Rating from 'react-rating';
 
 const ReviewItem = ({ review, user }) => {
+  let thisReview;
+  if (review.review === "") {
+    thisReview = "";
+  } else {
+    thisReview = <div className="line2-review">
+      <blockquote>
+        <i><b className="quote">“ </b>
+          {review.review}
+        <b className="quote"> ”</b></i>
+      </blockquote>
+    </div>;
+  }
+  console.log(thisReview);
+  console.log(review);
+
   return (
     <div className="review-item">
       <div className="line1-review">
@@ -20,13 +35,7 @@ const ReviewItem = ({ review, user }) => {
           />
         </div>
       </div>
-      <div className="line2-review">
-        <blockquote>
-          <i><b className="quote">“ </b>
-            {review.review}
-          <b className="quote"> ”</b></i>
-        </blockquote>
-      </div>
+      {thisReview}
     </div>
   );
 };
