@@ -1,0 +1,79 @@
+.modal-header {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  align-items: center;
+  h3 {
+    padding: 4px;
+    padding-left: 6px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+  }
+  .xMark2 {
+    height: 13px;
+    width: 13px;
+    cursor: pointer;
+    padding-right: 8px;
+    filter: invert(100%);
+  }
+
+}
+.chz-rating {
+  height: 40px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  span {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+}
+.modal-form-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .star {
+    height: 30px;
+    margin: 3px;
+  }
+  #emptyCheese {
+  }
+  #fullCheese {
+  }
+}
+
+.star-rating {
+  position: relative;
+}
+
+textarea {
+  margin-top: 3px;
+  font-size: 15px;
+}
+
+.submit-review {
+  cursor: pointer;
+  width: 256px;
+  height: 40px;
+  background-color: #FFC300;
+  border-radius: 0;
+  border-color: #FFC300;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: 'Heebo', sans-serif;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.submit-review:hover {
+  background-color: #E8B200;
+}

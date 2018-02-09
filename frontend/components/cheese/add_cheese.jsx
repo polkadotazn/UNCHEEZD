@@ -30,8 +30,35 @@ class AddCheese extends React.Component {
   }
 
   render () {
+    let category = <div>
+        <select
+          className="form-text2"
+          value={this.state.category}
+          onChange={this.update('category')}
+        >
+          <option disabled>
+            Select Category
+          </option>
+            {CHZ_TYPES.map((t, i) => {
+              return <option value={t} key={i}>{t}</option>;
+            })}
+        </select>
+      </div>;
     let welcomeSign = <div><h3>Edit Cheese</h3></div>;
     if(this.props.formType === 'new') {
+      category = <div>
+          <select
+            className="form-text2"
+            onChange={this.update('category')}
+          >
+            <option disabled selected>
+              Select Category
+            </option>
+              {CHZ_TYPES.map((t, i) => {
+                return <option value={t} key={i}>{t}</option>;
+              })}
+          </select>
+        </div>;
       welcomeSign =
       <div>
         <h3>Add New Cheese</h3>
@@ -47,6 +74,7 @@ class AddCheese extends React.Component {
     }
     const text = this.props.formType === 'new' ? "Add Cheese" : "Update Cheese";
     const state = this.state;
+    console.log(this.state);
     return (
       <div>
         {state &&
@@ -75,18 +103,7 @@ class AddCheese extends React.Component {
                   placeholder="Origin"
                   onChange={this.update('origin')}
                 />
-                <div>
-                  <select
-                    className="form-text2"
-                    value={this.state.category}
-                    defaultValue="Select cheese style"
-                    onChange={this.update('category')}
-                  >
-                    {CHZ_TYPES.map((t, i) => {
-                      return <option value={t} key={i}>{t}</option>;
-                    })}
-                  </select>
-                </div>
+              {category}
               </div>
               <textarea
                 className="chz-description"

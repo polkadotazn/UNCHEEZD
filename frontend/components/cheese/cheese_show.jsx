@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReviewFormContainer from '../reviews/review_form_container';
 
 class CheeseShow extends React.Component {
   componentDidMount () {
@@ -8,7 +9,6 @@ class CheeseShow extends React.Component {
 
   render () {
     const cheese = this.props.cheese;
-    console.log(cheese);
     return (
       <div>
         {cheese &&
@@ -35,7 +35,13 @@ class CheeseShow extends React.Component {
               </div>
               {cheese.description}
             </div>
-        </div>}
+            <div className="chz-review-box">
+              <ReviewFormContainer />
+              <h3>Reviews</h3>
+              <h4></h4>
+            </div>
+          </div>
+        }
       </div>
     );
   }
