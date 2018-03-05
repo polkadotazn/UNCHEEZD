@@ -21,6 +21,18 @@ If they try a particular cheese and have a desire to rate it, they have the abil
 The schema for the database may be found in the [UNCHEEZD wiki](https://github.com/polkadotazn/UNCHEEZD/wiki).
 ## Highlights
 It was really fun implementing novel features, such as the cheese/star ratings and making modal forms. I think it makes the site more interesting and customized.
+```javascript
+<Rating
+  className="star-rating"
+  emptySymbol={<img src="http://i68.tinypic.com/21l06bn.png"
+    className="star" id="emptyCheese"/>}
+  fullSymbol={<img src="http://i68.tinypic.com/15czlvt.png"
+    className="star" id="fullCheese"/>}
+  onChange={(rating) => this.setState({rating: rating})}
+  initialRating={this.state.rating}
+  fractions={2}
+/>
+```
 ## Future Directions
 1. Implement search by cheese, cheese type, or cheese brand
 2. Review Feed - users can see what recent cheese reviews have been made
