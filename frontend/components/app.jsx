@@ -16,7 +16,7 @@ import SessionLog from './navbar/logout_container';
 import CheeseIndexContainer from './cheese/cheese_index_container';
 import AddCheeseContainer from './cheese/add_cheese_container';
 import CheeseShowContainer from './cheese/cheese_show_container';
-import ReviewIndexContainer from './reviews/review_index_container';
+import ReviewFeedContainer from './review_feed/review_feed_container';
 
 const App = () => (
   <div id="App">
@@ -25,6 +25,7 @@ const App = () => (
       <AuthRoute exact path="/" component={FrontPage} />
       <AuthRoute exact path="/login" component={FrontAndSession} />
       <AuthRoute exact path="/signup" component={FrontAndSession} />
+      <ProtectedRoute exact path="/home" component={ReviewFeedContainer} />
       <ProtectedRoute exact path="/cheeseboard"
         component={CheeseIndexContainer} />
       <ProtectedRoute exact path="/cheeseboard/new"

@@ -15,8 +15,6 @@ const ReviewItem = ({ review, user }) => {
       </blockquote>
     </div>;
   }
-  console.log(thisReview);
-  console.log(review);
 
   return (
     <div className="review-item">

@@ -10,7 +10,6 @@ const mapStateToProps = (state, ownProps) => {
   if (ownProps.starReview) {
     cheeseReview = ownProps.starReview;
   }
-  console.log("STTTATE", state);
   return {
     cheeseReview: cheeseReview,
     currentUser: state.session.currentUser,
