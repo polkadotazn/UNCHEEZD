@@ -6,23 +6,34 @@ class ReviewFeed extends React.Component {
   componentWillMount () {
     this.props.requestAllReviews();
     this.props.requestAllUsers();
+    this.props.requestAllCheeses();
+  }
+
+  getCheeseName (cheeseId) {
+    return this.props.cheese;
+
   }
 
   render () {
+    console.log("CHEEESE",this.props.cheese);
     const users = this.props.users;
-    console.log(this.props.reviews);
     return (
-      <div className="review-idx">
-        {Object.values(this.props.reviews).map(review => {
-            return (
-              <ReviewItem
-                key={review.id}
-                rating={review.rating}
-                review={review}
-                user={users[review.user_id]}
-              />
-            );
-        })}
+      <div>
+        {users &&
+          <div className="review-idx">
+            {Object.values(this.props.reviews).map(review => {
+                return (
+                  <ReviewItem
+                    cheese={this.props.cheese[review.cheese_id].name}
+                    key={review.id}
+                    rating={review.rating}
+                    review={review}
+                    user={users[review.user_id]}
+                  />
+                );
+            })}
+          </div>
+        }
       </div>
     );
   }

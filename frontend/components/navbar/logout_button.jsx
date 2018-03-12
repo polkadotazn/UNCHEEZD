@@ -13,7 +13,7 @@ const logoutButton = (currentUser, logout) => (
 	<div className="inner-navbar">
     <div className="func-navbar">
       <div className="left-nav">
-        <Link to="/" id="title">
+        <Link to="/home" id="title">
           <h1>UNCHEEZD</h1>
         </Link>
         <Link to="/cheeseboard" className="cheeseboard">Cheese Board</Link>

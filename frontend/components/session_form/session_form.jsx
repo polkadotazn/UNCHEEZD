@@ -63,7 +63,6 @@ class SessionForm extends React.Component {
 
   renderRedirect () {
     if (this.state.redirect) {
-      console.log("home");
       return <Redirect to='/home' />;
     }
   }
