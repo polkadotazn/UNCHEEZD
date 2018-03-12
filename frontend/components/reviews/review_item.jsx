@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Rating from 'react-rating';
 
-const ReviewItem = ({ review, user, cheese }) => {
+const ReviewItem = ({ review, user }) => {
   let thisReview;
   if (review.review === "") {
     thisReview = "";
@@ -15,13 +15,12 @@ const ReviewItem = ({ review, user, cheese }) => {
       </blockquote>
     </div>;
   }
-  console.log("SDFSDFS",cheese);
+
   return (
     <div className="review-item">
       <div className="line1-review">
         <div className="inner">
-
-          <div className="text">{user.username} was eating <Link to=`/cheeseboard/${review.cheese_id}` >{cheese}</Link> and gave a rating of:</div>
+          <div className="text">{user.username} gave a rating of:</div>
           <Rating
             className="star-rating"
             emptySymbol={<img src="http://i68.tinypic.com/21l06bn.png"

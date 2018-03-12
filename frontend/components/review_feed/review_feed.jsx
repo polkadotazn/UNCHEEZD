@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ReviewItem from '../reviews/review_item';
+import ReviewFeedItem from './review_feed_item';
 
 class ReviewFeed extends React.Component {
   componentWillMount () {
@@ -9,22 +9,16 @@ class ReviewFeed extends React.Component {
     this.props.requestAllCheeses();
   }
 
-  getCheeseName (cheeseId) {
-    return this.props.cheese;
-
-  }
-
   render () {
-    console.log("CHEEESE",this.props.cheese);
     const users = this.props.users;
     return (
       <div>
         {users &&
-          <div className="review-idx">
+          <div className="review-fd-idx">
             {Object.values(this.props.reviews).map(review => {
                 return (
-                  <ReviewItem
-                    cheese={this.props.cheese[review.cheese_id].name}
+                  <ReviewFeedItem
+                    cheese={this.props.cheese[review.cheese_id]}
                     key={review.id}
                     rating={review.rating}
                     review={review}
