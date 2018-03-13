@@ -20,7 +20,7 @@ class SessionForm extends React.Component {
       this.setState({errors: nextProps.errors});
     }
     if (nextProps.loggedIn) {
-      this.props.history.push('/');
+      this.props.history.push('/home');
     }
   }
 

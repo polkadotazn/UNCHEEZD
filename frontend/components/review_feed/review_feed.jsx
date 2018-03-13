@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReviewFeedItem from './review_feed_item';
+import TimeAgo from 'react-timeago';
 
 class ReviewFeed extends React.Component {
   componentWillMount () {
@@ -11,6 +12,7 @@ class ReviewFeed extends React.Component {
 
   render () {
     const users = this.props.users;
+    console.log("hi",this.props);
     return (
       <div>
         {users &&
@@ -27,6 +29,7 @@ class ReviewFeed extends React.Component {
                       rating={review.rating}
                       review={review}
                       user={users[review.user_id]}
+                      created={review.created_at}
                     />
                   );
               })}
