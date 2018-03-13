@@ -34,6 +34,8 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     this.props.processForm({user});
+    console.log("process");
+    return <Redirect to='/home' />;
   }
 
   navLink () {
@@ -63,7 +65,7 @@ class SessionForm extends React.Component {
 
   renderRedirect () {
     if (this.state.redirect) {
-      return <Redirect to='/home' />;
+      return <Redirect to='/' />;
     }
   }
 
