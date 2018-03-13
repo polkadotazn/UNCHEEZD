@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReviewFeedItem from './review_feed_item';
-import TimeAgo from 'react-timeago';
 
 class ReviewFeed extends React.Component {
   componentWillMount () {
