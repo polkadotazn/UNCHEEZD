@@ -3,6 +3,24 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 0;
+  margin-bottom: 30px;
+}
+
+#rf-header {
+  display: flex;
+  background-color: #E7E7E7;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  h1 {
+    margin-left: 25px;
+    font-size: 30px;
+  }
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);
+}
+
+
+#rf-all-reviews {
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
 }
 
 .review-item-rf {
@@ -71,5 +89,11 @@ hr {
     border: 0.5px solid #eee;
     padding-bottom: 30px;
     padding-top: 15px;
+  }
+  .text m {
+    color: #c60;
+  }
+  .text m:hover {
+    text-decoration: underline;
   }
 }

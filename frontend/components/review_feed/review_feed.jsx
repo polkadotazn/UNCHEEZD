@@ -15,17 +15,22 @@ class ReviewFeed extends React.Component {
       <div>
         {users &&
           <div className="review-fd-idx">
-            {Object.values(this.props.reviews).map(review => {
-                return (
-                  <ReviewFeedItem
-                    cheese={this.props.cheese[review.cheese_id]}
-                    key={review.id}
-                    rating={review.rating}
-                    review={review}
-                    user={users[review.user_id]}
-                  />
-                );
-            })}
+            <div id="rf-header">
+              <h1>Recently Reviewed Cheeses</h1>
+            </div>
+              <div id="rf-all-reviews">
+              {Object.values(this.props.reviews).map(review => {
+                  return (
+                    <ReviewFeedItem
+                      cheese={this.props.cheese[review.cheese_id]}
+                      key={review.id}
+                      rating={review.rating}
+                      review={review}
+                      user={users[review.user_id]}
+                    />
+                  );
+              })}
+              </div>
           </div>
         }
       </div>

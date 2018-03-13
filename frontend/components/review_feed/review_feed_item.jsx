@@ -12,13 +12,13 @@ const ReviewFeedItem = ({ review, user, cheese }) => {
     </div>;
   }
   return (
-    
+
     <div className="review-item-rf">
       <div className="line1-review-rf">
 
         <div className="text">
           {user.username} was eating
-          <Link to={`/cheeseboard/${review.cheese_id}`} > {cheese.name} </Link>
+          <Link to={`/cheeseboard/${review.cheese_id}`} > <m>{cheese.name}</m> </Link>
           by {cheese.brand}
         </div>
 

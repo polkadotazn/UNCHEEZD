@@ -7,6 +7,9 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 0;
+  ul#all-cheeses {
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+  }
 }
 
 .chz-idx-top {
@@ -16,6 +19,7 @@
   margin-top: 25px;
   margin-bottom: 10px;
   align-items: center;
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);
 }
 
 .add-chz-button {
@@ -36,34 +40,35 @@
   color: white;
 }
 .chz-title {
-  margin-left: 15px;
+  margin-left: 25px;
   font-size: 30px;
 }
 
 #chz-name {
-  padding-top: 15px;
   color: #c60;
   font-size: 18px;
   margin-bottom: 3px;
+  padding-bottom: 9px
+}
+#chz-name:hover {
+  text-decoration: underline;
 }
 #chz-brand {
   color: #c60;
   font-size: 14px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 #chz-type {
   color: #474747;
   font-size: 14px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .chz-item-box {
   background-color: #FCFBF9;
   font-family: verdana;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 30px;
   border-bottom: 1px solid #E7E7E7;
-  padding-bottom: 15px;
 }
 
 .chz-item-box:last-of-type {

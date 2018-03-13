@@ -16,7 +16,7 @@ class CheeseIndex extends React.Component {
             <tag className="plus">+ </tag> Add New Cheese
           </Link>
         </div>
-        <ul>
+        <ul id="all-cheeses">
           {
             this.props.cheeses.map(cheese => (
               <CheeseItem
