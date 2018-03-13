@@ -20,5 +20,5 @@ class Cheese < ApplicationRecord
   validates :name, uniqueness: true
   validates :category, inclusion: { in: TYPES }
 
-  has_many :cheese_reviews
+  has_many :cheese_reviews, dependent: :destroy
 end

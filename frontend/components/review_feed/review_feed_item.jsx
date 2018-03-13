@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Rating from 'react-rating';
+import TimeAgo from 'react-timeago';
 
 const ReviewFeedItem = ({ review, user, cheese }) => {
   let thisReview;
@@ -11,7 +12,7 @@ const ReviewFeedItem = ({ review, user, cheese }) => {
       {review.review}
     </div>;
   }
-  console.log("what",cheese);
+  console.log("what",review);
   return (
 
     <div className="review-item-rf">
@@ -38,9 +39,14 @@ const ReviewFeedItem = ({ review, user, cheese }) => {
               readonly={true}
             />
           </div>
+
         </div>
+        <div id="timestamp"><i><TimeAgo date={review.created_at} /></i></div>
+
       </div>
+
       <hr />
+
     </div>
 
   );

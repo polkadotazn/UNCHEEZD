@@ -28,7 +28,6 @@ class ReviewFeed extends React.Component {
                       rating={review.rating}
                       review={review}
                       user={users[review.user_id]}
-                      created={review.created_at}
                     />
                   );
               })}
