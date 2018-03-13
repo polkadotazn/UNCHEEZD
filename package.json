@@ -15,6 +15,7 @@
     "react-router-dom": "^4.1.2",
     "react-stars": "^2.2.5",
     "react-modal": "^3.1.13",
+    "react-timeago": "^3.4.3",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
