@@ -26,7 +26,6 @@ const ReviewFeedItem = ({ review, user, cheese }) => {
 
         <div className="inner">
 
-          <div className="review-rf">{thisReview}</div>
           <div className="rating">
             <Rating
               className="star-rating"
@@ -39,6 +38,7 @@ const ReviewFeedItem = ({ review, user, cheese }) => {
               readonly={true}
             />
           </div>
+          <div className="review-rf">{thisReview}</div>
 
         </div>
         <div id="timestamp"><i><TimeAgo date={review.created_at} /></i></div>

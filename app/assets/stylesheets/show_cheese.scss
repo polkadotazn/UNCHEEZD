@@ -82,3 +82,31 @@
   border-bottom: 1px solid #E7E7E7;
   padding-bottom: 15px;
 }
+.average-rating {
+  margin-right: 40px;
+  span {
+    position: relative;
+    top: auto;
+    left: auto;
+    align-self: center;
+    top: 4px;
+    left: 10px;
+  }
+}
+
+.avg-rating-box {
+  border-top: 1px solid #EEE;
+  border-bottom: 1px solid #EEE;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-right: 30px;
+  padding-bottom: 7px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  .avg-rating-txt {
+    margin-top: 13px;
+    color: gray;
+  }
+}
