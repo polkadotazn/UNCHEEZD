@@ -12,7 +12,6 @@ const ReviewFeedItem = ({ review, user, cheese }) => {
       {review.review}
     </div>;
   }
-  console.log("what",review);
   return (
 
     <div className="review-item-rf">

@@ -17,6 +17,7 @@ import CheeseIndexContainer from './cheese/cheese_index_container';
 import AddCheeseContainer from './cheese/add_cheese_container';
 import CheeseShowContainer from './cheese/cheese_show_container';
 import ReviewFeedContainer from './review_feed/review_feed_container';
+import ProfileContainer from './profile/profile_container';
 
 const App = () => (
   <div id="App">
@@ -34,6 +35,7 @@ const App = () => (
         component={CheeseShowContainer} />
       <ProtectedRoute path="/cheeseboard/:cheeseId/edit"
         component={AddCheeseContainer} />
+      <ProtectedRoute path="/profile/:userId" component={ProfileContainer} />
       <Route render={() => <Redirect to="/" />} />
     </Switch>
   </div>
