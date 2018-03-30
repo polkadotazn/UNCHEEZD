@@ -11,3 +11,18 @@ export const fetchUser = id => (
     url: `api/users/${id}`
   })
 );
+
+export const updateUser = user => (
+  $.ajax({
+    method: 'PATCH',
+    url: `api/users/${user.id}`,
+    data: { user }
+  })
+);
+
+export const deleteUser = userId => (
+  $.ajax({
+    method: 'DELETE',
+    url: `api/users/${userId}`
+  })
+);
