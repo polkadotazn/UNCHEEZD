@@ -28,7 +28,7 @@ class CheeseShow extends React.Component {
   render () {
     let ratings = [];
     Object.values(this.props.reviews).forEach(obj => {
-      if(obj.cheese_id == this.props.match.params.cheeseId) {
+      if(obj.cheese_id === this.props.match.params.cheeseId) {
         ratings.push(obj.rating);
       }
     });
