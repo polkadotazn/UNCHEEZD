@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import ProfileView from './profile_view';
+import UserProfile from './user_profile';
 import { requestAllReviews, requestReview, updateReview,
   deleteReview } from '../../actions/review_actions';
 import { requestUser, requestAllUsers } from '../../actions/user_actions';
@@ -29,4 +29,4 @@ const mapDispatchToProps = dispatch => {
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(ProfileView));
+)(UserProfile));
