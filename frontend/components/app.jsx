@@ -36,6 +36,7 @@ const App = () => (
       <ProtectedRoute path="/cheeseboard/:cheeseId/edit"
         component={AddCheeseContainer} />
       <ProtectedRoute path="/profile/:userId" component={ProfileContainer} />
+      <ProtectedRoute path="/profile/" component={ProfileContainer} />
       <Route render={() => <Redirect to="/" />} />
     </Switch>
   </div>

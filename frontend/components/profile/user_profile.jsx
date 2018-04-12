@@ -5,18 +5,47 @@ import ReviewIndexContainer from '../reviews/review_index_container';
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
-
+    this.state = { users: null };
   }
 
   componentDidMount() {
-    this.props.requestAllUsers();
+    let that = this;
+    this.props.requestAllUsers().then(function(value){
+    console.log("this gets called after the end of the main stack. the value received and returned is: " + value);
+    console.log(that.props.users, "USERS");
+    that.setState({users: that.props.users});
+});
+
+
+  }
+
+  whichUser () {
+
+    if (this.props.match.location === "/profile") {
+      return this.props.currentUser;
+    } else if (this.props.users) {
+      return this.props.users[this.props.match.params.userId];
+    }
+    else {
+      return undefined;
+    }
   }
 
   render () {
-    const user = this.state.user;
+    // if(!this.state) {
+    //   return <div>Loading...</div>;
+    // }
+    console.log(this.state);
+    console.log(this.props);
+    const user = this.whichUser();
+    console.log(this.props.users,"Props");
+
+
+
+    // const user = this.props.currentUser;
     return (
       <div>
-        user.username
+        {user && user.username}
       </div>
     );
   }
