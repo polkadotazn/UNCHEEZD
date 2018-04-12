@@ -20,8 +20,8 @@ class UserProfile extends React.Component {
   }
 
   whichUser () {
-
-    if (this.props.match.location === "/profile") {
+    console.log("LOCATION",this.props.location.pathname);
+    if (this.props.location.pathname === "/profile") {
       return this.props.currentUser;
     } else if (this.props.users) {
       return this.props.users[this.props.match.params.userId];
@@ -39,6 +39,7 @@ class UserProfile extends React.Component {
     console.log(this.props);
     const user = this.whichUser();
     console.log(this.props.users,"Props");
+    console.log(user,"Louisa is very Lost");
 
 
 
