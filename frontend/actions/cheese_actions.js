@@ -27,9 +27,27 @@ export const receiveCheeseErrors = errors => ({
   errors
 });
 
+export const uploadPicture = (formData, id) => dispatch => (
+  CheeseAPIUtil.uploadPicture(formData, id).then(cheese => (
+    dispatch(receiveACheese(cheese))
+  ), err => {
+    return dispatch(receiveCheeseErrors(err.responseJSON));
+  })
+);
+
+export const updatePicture = (formData, id) => dispatch => (
+  CheeseAPIUtil.updatePicture(formData, id).then(cheese => (
+    dispatch(receiveACheese(cheese))
+  ), err => {
+    return dispatch(receiveCheeseErrors(err.responseJSON));
+  })
+);
+
 export const requestAllCheeses = () => dispatch => {
   return CheeseAPIUtil.fetchAllCheeses().then(cheeses => {
     return dispatch(receiveAllCheeses(cheeses));
+  }, err => {
+    return dispatch(receiveCheeseErrors(err.responseJSON));
   });
 };
 
@@ -42,17 +60,23 @@ export const requestACheese = id => dispatch => {
 export const createCheese = cheese => dispatch => {
   return CheeseAPIUtil.createCheese(cheese).then(cheese => (
     dispatch(receiveACheese(cheese))
-  ));
+  ), err => {
+    return dispatch(receiveCheeseErrors(err.responseJSON));
+  });
 };
 
 export const updateCheese = cheese => dispatch => {
   return CheeseAPIUtil.updateCheese(cheese).then(cheese => (
     dispatch(receiveACheese(cheese))
-  ));
+  ), err => {
+    return dispatch(receiveCheeseErrors(err.responseJSON));
+  });
 };
 
 export const deleteCheese = cheeseId => dispatch => {
   return CheeseAPIUtil.deleteCheese(cheeseId).then(cheese => (
     dispatch(removeCheese(cheese))
-  ));
+  ), err => {
+    return dispatch(receiveCheeseErrors(err.responseJSON));
+  });
 };

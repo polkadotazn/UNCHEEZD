@@ -24,6 +24,7 @@ class Api::CheesesController < ApplicationController
   # POST /cheeses
   # POST /cheeses.json
   def create
+    p("PAR",params)
     @cheese = Cheese.new(cheese_params)
 
     if @cheese.save
@@ -60,6 +61,6 @@ class Api::CheesesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cheese_params
-      params.require(:cheese).permit(:name, :description, :category, :brand, :origin)
+      params.require(:cheese).permit(:name, :description, :category, :brand, :origin, :cheese_pic)
     end
 end

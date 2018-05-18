@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180209101100) do
+ActiveRecord::Schema.define(version: 20180517030524) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,10 @@ ActiveRecord::Schema.define(version: 20180209101100) do
     t.string "origin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "cheese_pic_file_name"
+    t.string "cheese_pic_content_type"
+    t.integer "cheese_pic_file_size"
+    t.datetime "cheese_pic_updated_at"
     t.index ["name", "brand"], name: "index_cheeses_on_name_and_brand", unique: true
   end
 

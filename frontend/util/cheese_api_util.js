@@ -12,13 +12,23 @@ export const fetchACheese = id => (
   })
 );
 
-export const createCheese = cheese => (
+export const createCheese = (cheese) => (
   $.ajax({
     method: 'POST',
-    url: `api/cheeses`,
-    data: { cheese }
+    url: `/api/cheeses`,
+    data: { cheese },
+    processData: false,
+    contentType: false
   })
 );
+
+// export const createCheese = cheese => (
+//   $.ajax({
+//     method: 'POST',
+//     url: `api/cheeses`,
+//     data: { cheese }
+//   })
+// );
 
 export const updateCheese = cheese => (
   $.ajax({
@@ -32,5 +42,25 @@ export const deleteCheese = cheeseId => (
   $.ajax({
     method: 'DELETE',
     url: `api/cheeses/${cheeseId}`,
+  })
+);
+
+export const uploadPicture = data => (
+  $.ajax({
+    method: 'POST',
+    url: `/api/cheeses`,
+    data: data,
+    processData: false,
+    contentType: false
+  })
+);
+
+export const updatePicture = (data, id) => (
+  $.ajax({
+    method: 'PATCH',
+    url: `/api/cheeses/${id}`,
+    data: data,
+    processData: false,
+    contentType: false
   })
 );

@@ -29,6 +29,17 @@ class AddCheese extends React.Component {
       this.props.history.push('/cheeseboard'));
   }
 
+  handleFile(e) {
+    let data = new FormData();
+    data.append('file', e.target.files[0]);
+    console.log("DATA");
+    console.log(data);
+    // console.log(this.props.user.id);
+    // this.props.uploadPicture(data,this.props.user.id);
+    // this.props.updateUser(this.props.user.id);
+    this.setState({cheese_pic: data});
+  }
+
   render () {
     let category = <div>
         <select
@@ -111,7 +122,12 @@ class AddCheese extends React.Component {
                 placeholder="Description"
                 onChange={this.update('description')}
               />
-            <input type="submit" id="chz-submit" value={text} />
+
+              <input type="file" name="cheese_pic" accept="image/*" />
+              <input onChange={this.handleFile.bind(this)}
+                id="fileupload" name="myfile" type="file" />
+
+              <input type="submit" id="chz-submit" value={text} />
             </form>
           </div>
         }

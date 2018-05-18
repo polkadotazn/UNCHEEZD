@@ -2,12 +2,14 @@ class User < ApplicationRecord
   validates :username, :email, :session_token, :password_digest, presence: true
   validates :username, :email, uniqueness: true
   validates :password, length: {minimum: 6}, allow_nil: true
+  # validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
   after_initialize :ensure_session_token
 
   attr_reader :password
 
   has_many :cheese_reviews
+  # has_attached_file :avatar, styles: { thumb: '100x100>', square: '200x200#', medium: '300x300>' }
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
