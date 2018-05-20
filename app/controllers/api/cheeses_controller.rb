@@ -66,6 +66,6 @@ class Api::CheesesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cheese_params
-      params.require(:cheese).permit(:name, :description, :category, :brand, :origin, :cheese_pic)
+      params.permit(:name, :description, :category, :brand, :origin, :cheese_pic)
     end
 end

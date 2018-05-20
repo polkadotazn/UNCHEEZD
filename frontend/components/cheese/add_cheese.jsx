@@ -128,7 +128,6 @@ class AddCheese extends React.Component {
                 onChange={this.update('description')}
               />
 
-              <input type="file" name="cheese_pic" accept="image/*" />
               <input onChange={this.handleFile.bind(this)}
                 id="fileupload" name="myfile" type="file" />
 

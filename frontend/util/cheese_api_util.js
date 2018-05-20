@@ -12,15 +12,16 @@ export const fetchACheese = id => (
   })
 );
 
-export const createCheese = (cheese) => (
-  $.ajax({
+export const createCheese = (cheese) => {
+  console.log(cheese, "createCheese");
+  return $.ajax({
     method: 'POST',
     url: `/api/cheeses`,
-    data: { cheese },
+    data: cheese,
     processData: false,
     contentType: false
-  })
-);
+  });
+};
 
 // export const createCheese = cheese => (
 //   $.ajax({
