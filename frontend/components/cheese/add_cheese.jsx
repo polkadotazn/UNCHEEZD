@@ -25,19 +25,24 @@ class AddCheese extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.action(this.state).then(() =>
-      this.props.history.push('/cheeseboard'));
+
+    let data = new FormData();
+    let id = this.props.match.params.cheeseId;
+    console.log("cheeseId",id);
+
+    data.append('cheese_pic', this.state.cheese_pic);
+    data.append("category", this.state.category);
+    data.append("name", this.state.name);
+    data.append("brand", this.state.brand);
+    data.append("origin", this.state.origin);
+    data.append("description", this.state.description);
+    console.log("cheeseId2",id);
+    this.props.action(data,id).then(() =>
+    this.props.history.push('/cheeseboard'));
   }
 
   handleFile(e) {
-    let data = new FormData();
-    data.append('file', e.target.files[0]);
-    console.log("DATA");
-    console.log(data);
-    // console.log(this.props.user.id);
-    // this.props.uploadPicture(data,this.props.user.id);
-    // this.props.updateUser(this.props.user.id);
-    this.setState({cheese_pic: data});
+    this.setState({"cheese_pic": e.target.files[0]});
   }
 
   render () {

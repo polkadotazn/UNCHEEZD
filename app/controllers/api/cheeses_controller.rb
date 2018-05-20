@@ -28,6 +28,9 @@ class Api::CheesesController < ApplicationController
     @cheese = Cheese.new(cheese_params)
 
     if @cheese.save
+      p("URL",@cheese.cheese_pic.url)
+      @cheese.image_path = "https://s3-us-east-2#{@cheese.cheese_pic.url[4..-1]}"
+      @cheese.save
       render "api/cheeses/show"
     else
       render json: @cheese.errors, status: :unprocessable_entity
@@ -40,6 +43,8 @@ class Api::CheesesController < ApplicationController
   def update
 
     if @cheese.update(cheese_params)
+      @cheese.image_path = "https://s3-us-east-2#{@cheese.cheese_pic.url[4..-1]}"
+      @cheese.save
       render "api/cheeses/show"
     else
       render json: @cheese.errors, status: :unprocessable_entity
