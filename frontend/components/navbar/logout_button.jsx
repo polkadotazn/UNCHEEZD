@@ -18,9 +18,6 @@ const logoutButton = (currentUser, logout) => (
         </Link>
         <Link to="/cheeseboard" className="cheeseboard">Cheese Board</Link>
       </div>
-      <Link to="/profile" className="nav_profile_btn">
-        Profile
-      </Link>
       <button className="logout-button" onClick={logout}>Log Out</button>
     </div>
 	</div>
@@ -31,3 +28,8 @@ const sessionLog = ({ currentUser, logout }) => (
 );
 
 export default sessionLog;
+
+
+// <Link to="/profile" className="nav_profile_btn">
+//   Profile
+// </Link>

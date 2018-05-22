@@ -24,19 +24,35 @@ class Api::CheesesController < ApplicationController
   # POST /cheeses
   # POST /cheeses.json
   def create
-    p("PAR",params)
     @cheese = Cheese.new(cheese_params)
 
     if @cheese.save
-      p("URL",@cheese.cheese_pic.url)
-      @cheese.image_path = "https://s3-us-east-2#{@cheese.cheese_pic.url[4..-1]}"
-      @cheese.save
+      unless @cheese.cheese_pic_file_name.nil?
+        @cheese.image_path = "https://s3-us-east-2#{@cheese.cheese_pic.url[4..-1]}"
+        @cheese.save
+      end
       render "api/cheeses/show"
     else
-      render json: @cheese.errors, status: :unprocessable_entity
+      render json: @cheese.errors,
+      status: :unprocessable_entity
     end
 
   end
+
+  # def create
+  #   p("PASD",params);
+  #   @cheese = Cheese.new(cheese_params)
+  #   if @cheese.save!
+  #     unless @cheese.cheese_pic_file_name.nil?
+  #       @cheese.image_path = "https://s3-us-west-2#{@cheese.cheese_pic.url[4..-1]}"
+  #       @cheese.save
+  #     end
+  #     render "api/cheeses/show"
+  #   else
+  #     render json: @cheese.errors,
+  #     status: :unprocessable_entity
+  #   end
+  # end
 
   # PATCH/PUT /cheeses/1
   # PATCH/PUT /cheeses/1.json

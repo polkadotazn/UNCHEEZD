@@ -65,10 +65,15 @@
 }
 
 .chz-item-box {
+  display: flex;
   background-color: #FCFBF9;
   font-family: verdana;
   padding: 30px;
   border-bottom: 1px solid #E7E7E7;
+  ul {
+    max-width: 680px;
+    width: 100%;
+  }
 }
 
 .chz-item-box:last-of-type {
@@ -84,4 +89,9 @@ ul {
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
   -webkit-padding-start: 0;
+}
+
+#cheese_image {
+    width: 180px; /* you can use % */
+    height: 100%;
 }

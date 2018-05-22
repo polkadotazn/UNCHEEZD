@@ -10,11 +10,11 @@ const CheeseItem = ({ cheese }) => {
         <Link to={`/cheeseboard/${cheese.id}`}>
           <li id="chz-name">{cheese.name}</li>
         </Link>
-        {img}
         <li id="chz-brand">{cheese.brand}</li>
         <li id="chz-type">{cheese.category}</li>
         <li id="description">{cheese.description}</li>
       </ul>
+      {img}
 
     </li>
   );
