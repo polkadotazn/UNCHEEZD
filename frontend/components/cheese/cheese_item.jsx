@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CheeseItem = ({ cheese }) => {
-  let img = <img id="cheese_image" src={cheese.image_path}/>;
+  let img = <img id="cheese_image" src={cheese.image_path}
+    className="cheezpic" />;
   return (
     <li className="chz-item-box">
       <ul>
