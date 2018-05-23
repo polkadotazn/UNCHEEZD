@@ -1,5 +1,6 @@
 class Api::CheesesController < ApplicationController
   before_action :set_cheese, only: [:show, :edit, :update, :destroy]
+  attr_accessor :cheese_pic_file_name
 
   # GET /cheeses
   # GET /cheeses.json

@@ -17,7 +17,7 @@ export const createCheese = (cheese) => {
   return $.ajax({
     method: 'POST',
     url: `/api/cheeses`,
-    data: cheese,
+    data: { cheese },
     processData: false,
     contentType: false
   });
