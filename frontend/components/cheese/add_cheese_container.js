@@ -21,7 +21,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     uploadPicture: (formData,id) => dispatch(uploadPicture(formData, id)),
     requestACheese: id => dispatch(requestACheese(id)),
-    action: cheese => dispatch(action(cheese))
+    action: (cheese, id) => dispatch(action(cheese, id))
   };
 };
 

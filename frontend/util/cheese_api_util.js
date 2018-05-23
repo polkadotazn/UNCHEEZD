@@ -13,11 +13,10 @@ export const fetchACheese = id => (
 );
 
 export const createCheese = (cheese) => {
-  console.log(cheese, "createCheese");
   return $.ajax({
     method: 'POST',
     url: `/api/cheeses`,
-    data: { cheese },
+    data: cheese,
     processData: false,
     contentType: false
   });
@@ -31,11 +30,13 @@ export const createCheese = (cheese) => {
 //   })
 // );
 
-export const updateCheese = cheese => (
+export const updateCheese = (cheese, id) => (
   $.ajax({
     method: 'PATCH',
-    url: `api/cheeses/${cheese.id}`,
-    data: { cheese }
+    url: `api/cheeses/${id}`,
+    data: cheese,
+    processData: false,
+    contentType: false
   })
 );
 

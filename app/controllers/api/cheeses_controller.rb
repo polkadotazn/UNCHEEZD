@@ -1,6 +1,6 @@
 class Api::CheesesController < ApplicationController
   before_action :set_cheese, only: [:show, :edit, :update, :destroy]
-  attr_accessor :cheese_pic_file_name
+  attr_accessor :image_path
 
   # GET /cheeses
   # GET /cheeses.json
@@ -59,7 +59,7 @@ class Api::CheesesController < ApplicationController
   # PATCH/PUT /cheeses/1.json
   def update
 
-    if @cheese.update(cheese_params)
+    if @cheese.update_attributes(cheese_params)
       @cheese.image_path = "https://s3-us-east-2#{@cheese.cheese_pic.url[4..-1]}"
       @cheese.save
       render "api/cheeses/show"

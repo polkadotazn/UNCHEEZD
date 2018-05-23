@@ -65,9 +65,9 @@ export const createCheese = cheese => dispatch => {
   });
 };
 
-export const updateCheese = cheese => dispatch => {
-  return CheeseAPIUtil.updateCheese(cheese).then(cheese => (
-    dispatch(receiveACheese(cheese))
+export const updateCheese = (cheese, id) => dispatch => {
+  return CheeseAPIUtil.updateCheese(cheese, id).then(cheese2 => (
+    dispatch(receiveACheese(cheese2))
   ), err => {
     return dispatch(receiveCheeseErrors(err.responseJSON));
   });

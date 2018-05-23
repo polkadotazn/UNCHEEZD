@@ -28,15 +28,12 @@ class AddCheese extends React.Component {
 
     let data = new FormData();
     let id = this.props.match.params.cheeseId;
-    console.log("cheeseId",id);
-
     data.append('cheese_pic', this.state.cheese_pic);
     data.append("category", this.state.category);
     data.append("name", this.state.name);
     data.append("brand", this.state.brand);
     data.append("origin", this.state.origin);
     data.append("description", this.state.description);
-    console.log("cheeseId2",id);
     this.props.action(data,id).then(() =>
     this.props.history.push('/cheeseboard'));
   }
