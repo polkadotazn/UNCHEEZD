@@ -10,22 +10,25 @@ const sessionLinks = () => (
 );
 
 const logoutButton = (currentUser, logout) => (
-	<div className="inner-navbar">
-    <div className="func-navbar">
-      <div className="left-nav">
-        <Link to="/home" id="title">
-          <b>UNCHEEZD</b>
-        </Link>
-        <Link to="/cheeseboard" className="cheeseboard">Cheese Board</Link>
+  <div className="outer-nav">
+  	<div className="inner-navbar">
+      <div className="func-navbar">
+        <div className="left-nav">
+          <Link to="/home" id="title">
+            <b>UNCHEEZD</b>
+          </Link>
+          <Link to="/cheeseboard" className="cheeseboard">Cheese Board</Link>
+        </div>
+        <div className="right-nav">
+          <Link to="/profile" className="profile_btn">
+            Profile
+          </Link>
+          <button className="logout-button" onClick={logout}>Log Out</button>
+        </div>
       </div>
-      <div className="right-nav">
-        <Link to="/profile" className="profile_btn">
-          Profile
-        </Link>
-        <button className="logout-button" onClick={logout}>Log Out</button>
-      </div>
-    </div>
-	</div>
+  	</div>
+    <div className="blank-div"></div>
+  </div>
 );
 
 const sessionLog = ({ currentUser, logout }) => (

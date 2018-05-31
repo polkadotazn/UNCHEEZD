@@ -45,6 +45,10 @@
   }
 }
 
+.blank-div {
+  height: 70px;
+}
+
 .inner-navbar {
   font-family: helvetica;
   background-color: #FFC300;
@@ -90,15 +94,13 @@
   }
   a:link {
     text-decoration: none;
+    color: white;
 
   }
   a:visited {
     color: white;
     text-decoration: none;
 
-  }
-  a:active {
-    color: white;
   }
 
   a:hover {
