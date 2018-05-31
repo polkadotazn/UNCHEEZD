@@ -4,6 +4,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  height: 80px;
 }
 
 .left-nav {
@@ -12,6 +13,36 @@
   justify-content: flex-start;
   display: flex;
   // justify-content: space-around;
+  align-items: center;
+  font-size: 21px;
+  .cheeseboard {
+    align-self: center;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  #title {
+    margin-left: 12px;
+    margin-right: 25px;
+    font-size: 22px;
+  }
+  #title:hover {
+    font-weight: 700;
+  }
+}
+
+.right-nav {
+  width: 100%;
+  max-width: 200px;
+  justify-content:space-around;
+  display: flex;
+  align-items: center;
+  .profile_btn {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    // text-transform: uppercase;
+  }
 }
 
 .inner-navbar {
@@ -20,9 +51,11 @@
   display: flex;
   // flex-direction: row;
   justify-content: space-around;
-  align-items: center;
   color: white;
-
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 
   .logout-button {
     text-transform: uppercase;
@@ -44,10 +77,6 @@
     background-color: white;
     color: #FFC300;
   }
-  .cheeseboard {
-    align-self: center;
-    font-size: 18px;
-  }
   h1 {
     text-align: center;
     margin: 0;
@@ -61,17 +90,19 @@
   }
   a:link {
     text-decoration: none;
-    font-weight: 500;
+
   }
   a:visited {
     color: white;
     text-decoration: none;
-    font-weight: 500;
+
   }
   a:active {
     color: white;
   }
+
   a:hover {
     text-decoration: underline;
+    font-weight: 500;
   }
 }
