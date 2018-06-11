@@ -8,6 +8,7 @@ class CheeseIndex extends React.Component {
   }
 
   render () {
+    console.log("SAM",this.props);
     return (
       <div className="cheese-idx-page">
         <div className="chz-idx-top">
