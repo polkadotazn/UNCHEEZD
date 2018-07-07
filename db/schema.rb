@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180520204215) do
+ActiveRecord::Schema.define(version: 20180707023940) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20180520204215) do
     t.string "cheese_pic_content_type"
     t.integer "cheese_pic_file_size"
     t.datetime "cheese_pic_updated_at"
-    t.string "image_path", default: "https://s3.us-east-2.amazonaws.com/uncheezd/cheeses/cheese_pics/default_cheese_pic.png"
+    t.string "image_path", default: "http://res.cloudinary.com/dwhul27lp/image/upload/v1530922524/default_cheese_pic.png"
     t.index ["name", "brand"], name: "index_cheeses_on_name_and_brand", unique: true
   end
 
