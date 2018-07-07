@@ -52,6 +52,11 @@
 
 .star-rating {
   position: relative;
+  z-index: 1;
+}
+
+span {
+  z-index: 0;
 }
 
 
