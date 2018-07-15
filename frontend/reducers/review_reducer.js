@@ -8,7 +8,6 @@ const reviewReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_ALL_REVIEWS:
-      console.log("action", action);
       return merge({}, state, action.reviews);
     case RECEIVE_REVIEW:
       return merge({}, state, {[action.review.id]: action.review});

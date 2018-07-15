@@ -8,8 +8,6 @@ const mapStateToProps = (state, ownProps) => {
   return {
       cheese: state.cheese[ownProps.match.params.cheeseId],
       reviews: state.reviews
-
-
   };
 
 };
