@@ -1,4 +1,3 @@
-![splash page](http://i64.tinypic.com/2gvpoo0.png)
 # UNCHEEZD
 **Discover your new favorite cheese at** [UNCHEEZD Live](https://uncheezd.herokuapp.com/#/)
 
@@ -9,13 +8,10 @@ This repository contains the application for UNCHEEZD, a site inspired by UNTAPP
 The backend of the project was built using Ruby on Rails, with a PostgreSQL database. AJAX and JSON were used to fetch data as objects to send to the frontend. Frontend rendering was created using Javascript, React and Redux. Styling was done using SASS.
 ## Features
 #### Authentication
-![sign up!](http://i63.tinypic.com/123t9ht.png)<br>
 Single layer authentication was created from scratch with the BCrypt gem and SecureRandom hashing. Right now, users are able to either create an account and log in, or log in through a guest account. Errors are rendered if there are sign in or log in issues.
 #### Cheese Board
-![cheeeeese](http://i67.tinypic.com/2hz0d2w.png)<br>
 Once logged in, users are able to browse cheeses, add a cheese, remove cheeses, and edit cheeses. They are also able to go to individual cheese pages and see cheese reviews.
 #### Cheese Reviews
-![critic](http://i66.tinypic.com/2ivxxz4.png)<br>
 If they try a particular cheese and have a desire to rate it, they have the ability to do that as well. Cheeses can be rated on a 5-cheese scale, facilitated using a react-rating package with custom cheese icons (in the place of stars).
 #### Database
 The schema for the database may be found in the [UNCHEEZD wiki](https://github.com/polkadotazn/UNCHEEZD/wiki).
