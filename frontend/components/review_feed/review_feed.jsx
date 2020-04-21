@@ -11,7 +11,6 @@ class ReviewFeed extends React.Component {
 
   render () {
     const users = this.props.users;
-    console.log("hi",this.props);
     return (
       <div>
         {users &&
