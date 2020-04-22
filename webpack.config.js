@@ -32,16 +32,21 @@ var webpack = require("webpack");
 var plugins = []; // if using any plugins for both dev and production
 var devPlugins = []; // if using any plugins for development
 
+const UglifyJsPlugin = require("uglifyjs-3-webpack-plugin");
+
 var prodPlugins = [
   new webpack.DefinePlugin({
     'process.env': {
       'NODE_ENV': JSON.stringify('production')
     }
   }),
-  new webpack.optimize.UglifyJsPlugin({
-    compress: {
-      warnings: true
-    }
+  new UglifyJsPlugin({
+    uglifyOptions: {
+    warnings: false,
+    ie8: false,
+    output: {
+      comments: false
+    }}
   })
 ];
 
@@ -59,14 +64,16 @@ module.exports = {
   },
   plugins: plugins,
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['react', 'es2015']
-        }
+        test: /\.jsx$/,
+        use: [{
+          loader: 'babel-loader',
+          query: {
+            presets: ['react', 'es2015']
+          }
+        }],
+        exclude: /node_modules/
       }
     ]
   },

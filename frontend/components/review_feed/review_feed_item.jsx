@@ -12,6 +12,10 @@ const ReviewFeedItem = ({ review, user, cheese }) => {
       {review.review}
     </div>;
   }
+  if (!user || !cheese) {
+    return null;
+  }
+
   return (
 
     <div className="review-item-rf">
