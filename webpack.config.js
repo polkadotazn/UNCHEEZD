@@ -4,7 +4,7 @@ var webpack = require("webpack");
 var plugins = []; // if using any plugins for both dev and production
 var devPlugins = []; // if using any plugins for development
 
-var UglifyJsPlugin = require("uglifyjs-3-webpack-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
 
 var prodPlugins = [
   new webpack.DefinePlugin({
@@ -12,14 +12,12 @@ var prodPlugins = [
       'NODE_ENV': JSON.stringify('production')
     }
   }),
-  new UglifyJsPlugin({
-    uglifyOptions: {
-    warnings: false,
-    ie8: false,
-    output: {
-      comments: false
-    }}
-  })
+  new TerserPlugin({
+    parallel: true,
+    terserOptions: {
+      ecma: 6,
+    },
+  }),
 ];
 
 plugins = plugins.concat(

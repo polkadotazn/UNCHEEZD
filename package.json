@@ -53,7 +53,7 @@
   "devDependencies": {
     "babel-loader": "^7.1.5",
     "file-loader": "^6.0.0",
-    "uglifyjs-3-webpack-plugin": "^1.2.4",
+    "terser-webpack-plugin": "^2.3.5",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
