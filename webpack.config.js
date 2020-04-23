@@ -1,31 +1,3 @@
-// var path = require("path");
-//
-// module.exports = {
-//   context: __dirname,
-//   entry: "./frontend/uncheezd.jsx",
-//   output: {
-//     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
-//     filename: "bundle.js"
-//   },
-//   module: {
-//     loaders: [
-//       {
-//         test: [/\.jsx?$/, /\.js?$/],
-//         exclude: /node_modules/,
-//         loader: 'babel-loader',
-//         query: {
-//           presets: ['es2015', 'react']
-//         }
-//       }
-//     ]
-//   },
-//   devtool: 'source-map',
-//   resolve: {
-//     extensions: [".js", ".jsx", "*"]
-//   },
-//
-// };
-
 var path = require("path");
 var webpack = require("webpack");
 
@@ -56,6 +28,7 @@ plugins = plugins.concat(
 
 // include plugins config
 module.exports = {
+  mode: 'none',
   context: __dirname,
   entry: "./frontend/uncheezd.jsx",
   output: {
