@@ -3,6 +3,7 @@ bundle.js
 bundle.js.map
 log/
 tmp/
+public/assets
 
 /config/master.key
 config/credentials.yml.enc
