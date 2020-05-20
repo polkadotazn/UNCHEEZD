@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Rating from 'react-rating';
+import StarRatingItem from '../shared/star_rating_item';
 
 const ReviewItem = ({ review, user }) => {
   let thisReview;
@@ -21,16 +22,7 @@ const ReviewItem = ({ review, user }) => {
       <div className="line1-review">
         <div className="inner">
           <div className="text">{user.username} gave a rating of:</div>
-          <Rating
-            className="star-rating"
-            emptySymbol={<img src="http://i68.tinypic.com/21l06bn.png"
-              className="star" id="emptyCheese"/>}
-            fullSymbol={<img src="http://i68.tinypic.com/15czlvt.png"
-              className="star" id="fullCheese"/>}
-            initialRating={review.rating}
-            fractions={2}
-            readonly={true}
-          />
+          <StarRatingItem rating={review.rating} fractions={2} />
         </div>
       </div>
       {thisReview}

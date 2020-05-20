@@ -19,8 +19,6 @@ class ReviewForm extends React.Component {
     this.closeModal = this.closeModal.bind(this);
   }
 
-
-
   modalStyle () {
     return {
       overlay: {
@@ -97,9 +95,7 @@ class ReviewForm extends React.Component {
           ariaHideApp={false}
         >
           <div className="inner-modal">
-
             <div className="modal-header">
-
               <h3>Leave a Review</h3>
               <img className="xMark2"
                 onClick={this.closeModal}
@@ -111,10 +107,10 @@ class ReviewForm extends React.Component {
                 <div className="chz-rating">
                   <Rating
                     className="star-rating"
-                    emptySymbol={<img src="http://i68.tinypic.com/21l06bn.png"
-                      className="star" id="emptyCheese"/>}
-                    fullSymbol={<img src="http://i68.tinypic.com/15czlvt.png"
-                      className="star" id="fullCheese"/>}
+                    emptySymbol={<img src={window.clearChzImg}
+                      className="star"/>}
+                    fullSymbol={<img src={window.filledChzImg}
+                      className="star"/>}
                     onChange={(rating) => this.setState({rating: rating})}
                     initialRating={this.state.rating}
                     fractions={2}

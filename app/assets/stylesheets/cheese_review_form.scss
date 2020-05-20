@@ -44,28 +44,14 @@
     height: 30px;
     margin: 3px;
   }
-  #emptyCheese {
+  textarea {
+    padding: 2px 3px;
+    margin-top: 3px;
+    font-size: 15px;
   }
-  #fullCheese {
-  }
-}
-
-.star-rating {
-  position: relative;
-  z-index: 1;
-}
-
-span {
-  z-index: 0;
 }
 
 
-
-textarea {
-  padding: 2px 3px;
-  margin-top: 3px;
-  font-size: 15px;
-}
 
 .submit-review {
   cursor: pointer;

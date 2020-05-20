@@ -6,4 +6,4 @@ tmp/
 public/assets
 
 /config/master.key
-config/credentials.yml.enc
+config/credentials.yml.env

@@ -36,6 +36,9 @@
   background-color: #FCFBF9;
   padding: 15px;
   justify-content: space-around;
+  .star-rating-item {
+    padding-top: 9px;
+  }
 }
 
 .line2-review {
@@ -62,8 +65,6 @@ blockquote {
     top: auto;
     left: auto;
     align-self: center;
-    top: 5px;
-    left: 10px;
   }
   .star {
     height: 25px;

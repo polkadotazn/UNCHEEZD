@@ -89,8 +89,6 @@
     top: auto;
     left: auto;
     align-self: center;
-    top: 4px;
-    left: 10px;
   }
 }
 
@@ -103,10 +101,10 @@
   justify-content: center;
   padding-right: 30px;
   padding-bottom: 7px;
+  padding-top: 15px;
   margin-top: 15px;
   margin-bottom: 10px;
   .avg-rating-txt {
-    margin-top: 13px;
     color: gray;
   }
 }

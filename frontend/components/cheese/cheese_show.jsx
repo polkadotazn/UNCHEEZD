@@ -3,6 +3,7 @@ import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 import ReviewFormContainer from '../reviews/review_form_container';
 import ReviewIndexContainer from '../reviews/review_index_container';
+import StarRatingItem from '../shared/star_rating_item';
 
 class CheeseShow extends React.Component {
   constructor(props) {
@@ -47,7 +48,6 @@ class CheeseShow extends React.Component {
       <div>
         {cheese &&
           <div className="show-chz-box">
-
             <div className="show-chz-header">
               <h3 id="chz-show-title">{cheese.name}</h3>
               <div id="show-buttons">
@@ -62,34 +62,20 @@ class CheeseShow extends React.Component {
                 </button>
               </div>
             </div>
-
             <div className="main-chz-show">
               <div id="chz-type">
                 <li>brand: <b>{cheese.brand}</b></li>
                 <li>type: <b>{cheese.category}</b></li>
                 <li>from: <b>{cheese.origin}</b></li>
               </div>
-
               <div className="avg-rating-box">
                 <div className="average-rating">
-                  <Rating
-                    className="star-rating"
-                    emptySymbol={<img src="http://i68.tinypic.com/21l06bn.png"
-                      className="star" id="emptyCheese"/>}
-                    fullSymbol={<img src="http://i68.tinypic.com/15czlvt.png"
-                      className="star" id="fullCheese"/>}
-                    initialRating={avgRating}
-                    fractions={10}
-                    readonly={true}
-                  />
+                  <StarRatingItem rating={avgRating} fractions={10} />
                 </div>
                 <div className="avg-rating-txt">{theAvgRating}</div>
               </div>
-
               {cheese.description}
-
             </div>
-
             <div className="chz-review-box">
               <header className="review-header">
                 <h3>Reviews</h3>
