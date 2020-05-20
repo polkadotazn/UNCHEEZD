@@ -95,9 +95,7 @@ class ReviewForm extends React.Component {
           ariaHideApp={false}
         >
           <div className="inner-modal">
-
             <div className="modal-header">
-
               <h3>Leave a Review</h3>
               <img className="xMark2"
                 onClick={this.closeModal}
@@ -110,9 +108,9 @@ class ReviewForm extends React.Component {
                   <Rating
                     className="star-rating"
                     emptySymbol={<img src={window.clearChzImg}
-                      className="star" id="emptyCheese"/>}
+                      className="star"/>}
                     fullSymbol={<img src={window.filledChzImg}
-                      className="star" id="fullCheese"/>}
+                      className="star"/>}
                     onChange={(rating) => this.setState({rating: rating})}
                     initialRating={this.state.rating}
                     fractions={2}

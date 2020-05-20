@@ -62,25 +62,20 @@ class CheeseShow extends React.Component {
                 </button>
               </div>
             </div>
-
             <div className="main-chz-show">
               <div id="chz-type">
                 <li>brand: <b>{cheese.brand}</b></li>
                 <li>type: <b>{cheese.category}</b></li>
                 <li>from: <b>{cheese.origin}</b></li>
               </div>
-
               <div className="avg-rating-box">
                 <div className="average-rating">
                   <StarRatingItem rating={avgRating} fractions={10} />
                 </div>
                 <div className="avg-rating-txt">{theAvgRating}</div>
               </div>
-
               {cheese.description}
-
             </div>
-
             <div className="chz-review-box">
               <header className="review-header">
                 <h3>Reviews</h3>

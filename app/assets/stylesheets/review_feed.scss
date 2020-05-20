@@ -72,8 +72,6 @@ hr {
     top: auto;
     left: auto;
     align-self: center;
-    top: 5px;
-    left: 10px;
   }
   .star {
     height: 25px;
@@ -88,7 +86,10 @@ hr {
     margin-top: 18px;
     border: 0.5px solid #eee;
     padding-bottom: 20px;
-    padding-top: 12px;
+    padding-top: 20px;
+    .rating {
+      padding-left: 20px;
+    }
   }
   .text m {
     color: #c60;
@@ -104,6 +105,6 @@ hr {
     align-self: center;
   }
   .review-rf {
-    margin-top: 15px;
+    margin-top: 5px;
   }
 }
