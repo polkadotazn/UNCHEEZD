@@ -31,25 +31,3 @@ class ReviewIndex extends React.Component {
 }
 
 export default ReviewIndex;
-
-
-// console.log("review prop",this.props);
-// if (!this.props.review) {
-//   return null;
-// }
-// return (
-//   <div className="review-idx">
-//     {this.props.reviews.map(review => {
-//       if (review.cheese_id === this.props.ownProps.params.id) {
-//       return (<ReviewItem
-//         key={review.id}
-//         rating={review.rating}
-//         review={review}
-//          />
-//      );
-//      }
-//
-//    })};
-//
-//   </div>
-// );

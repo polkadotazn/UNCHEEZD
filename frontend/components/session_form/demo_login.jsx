@@ -13,7 +13,6 @@ class demoLogin extends React.Component {
 
 
   render () {
-    console.log(this.props.formType);
 
       return (
         <div>

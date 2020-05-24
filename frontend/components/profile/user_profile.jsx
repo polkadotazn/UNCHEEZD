@@ -11,23 +11,18 @@ class UserProfile extends React.Component {
   componentDidMount() {
     let that = this;
     this.props.requestAllUsers().then(function(value){
-    console.log("this gets called after the end of the main stack. the value received and returned is: " + value);
-    console.log(that.props.users, "USERS");
-    that.setState({users: that.props.users});
-});
-
-
+      that.setState({users: that.props.users});
+    });
   }
 
   whichUser () {
-    console.log("LOCATION",this.props.location.pathname);
     if (this.props.location.pathname === "/profile") {
       return this.props.currentUser;
     } else if (this.props.users) {
       return this.props.users[this.props.match.params.userId];
     }
     else {
-      return undefined;
+      return null;
     }
   }
 
@@ -35,18 +30,15 @@ class UserProfile extends React.Component {
     // if(!this.state) {
     //   return <div>Loading...</div>;
     // }
-    console.log(this.state);
-    console.log(this.props);
     const user = this.whichUser();
-    console.log(this.props.users,"Props");
     console.log(user,"Louisa is very Lost");
 
 
 
     // const user = this.props.currentUser;
     return (
-      <div>
-        {user && user.username}
+      <div className="profile-container">
+        {user && user.username}: Your profile is coming soon!
       </div>
     );
   }
