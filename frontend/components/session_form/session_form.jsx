@@ -34,7 +34,6 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     this.props.processForm({user});
-    console.log("process");
     return <Redirect to='/home' />;
   }
 
