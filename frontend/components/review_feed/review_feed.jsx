@@ -19,7 +19,9 @@ class ReviewFeed extends React.Component {
               <h1>Recently Reviewed Cheeses</h1>
             </div>
               <div id="rf-all-reviews">
-              {Object.values(this.props.reviews).map(review => {
+              {Object.values(this.props.reviews)
+                .sort((r1,r2) => new Date(r2.updated_at) - new Date(r1.updated_at))
+                .map(review => {
                   return (
                     <ReviewFeedItem
                       cheese={this.props.cheese[review.cheese_id]}
